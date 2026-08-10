@@ -9,10 +9,6 @@
 
 <style>
 
-/* =====================================================
-RESET
-===================================================== */
-
 * {
 margin: 0;
 padding: 0;
@@ -26,7 +22,7 @@ scroll-behavior: smooth;
 body {
 font-family: Arial, Helvetica, sans-serif;
 background: #080808;
-color: #ffffff;
+color: #fff;
 line-height: 1.6;
 }
 
@@ -36,143 +32,87 @@ HEADER
 ===================================================== */
 
 header {
-
 background: #050505;
-
 min-height: 100px;
-
-padding: 8px 6%;
-
+padding: 6px 6%;
 display: flex;
-
 justify-content: space-between;
-
 align-items: center;
-
 position: sticky;
-
 top: 0;
-
 z-index: 1000;
-
 border-bottom: 1px solid #292929;
 }
 
-
-/* LOGO AREA */
-
 .logo-area {
-
 display: flex;
-
 align-items: center;
-
 gap: 15px;
 }
 
-
-/* BIG LOGO */
-
 .logo-img {
-
 width: 90px;
-
 height: 90px;
-
 object-fit: contain;
-
 display: block;
 }
 
-
 .brand-name {
-
 color: #e00000;
-
 font-size: 28px;
-
 font-weight: 900;
-
 letter-spacing: 3px;
 }
 
-
 .tagline {
-
-color: #999999;
-
+color: #999;
 font-size: 9px;
-
 letter-spacing: 2px;
 }
 
-
-/* =====================================================
-NAVIGATION
-===================================================== */
-
 nav {
-
 display: flex;
-
 align-items: center;
-
 flex-wrap: wrap;
 }
 
 nav a {
-
-color: #ffffff;
-
+color: #fff;
 text-decoration: none;
-
 margin-left: 22px;
-
 font-size: 14px;
-
 font-weight: bold;
-
-transition: 0.3s;
+transition: .3s;
 }
 
 nav a:hover,
 nav a.active {
-
 color: #e00000;
 }
 
 
 /* =====================================================
-HERO
+TOP HERO
+FIRST BACKGROUND IMAGE = CROPPED
 ===================================================== */
 
 .hero {
-
 position: relative;
 
 min-height: 760px;
 
-background-color: #050505;
-
 display: flex;
-
 align-items: center;
 
 overflow: hidden;
+
+background: #050505;
 }
 
 
-/*
-IMPORTANT:
-
-CONTAIN = image crop nahi hogi.
-
-Image apne original proportion mein
-center mein poori dikhegi.
-*/
+/* TOP BACKGROUND IMAGE */
 
 .hero::before {
-
 content: "";
 
 position: absolute;
@@ -180,22 +120,30 @@ position: absolute;
 inset: 0;
 
 background-image:
+linear-gradient(
+rgba(0,0,0,0.30),
+rgba(0,0,0,0.60)
+),
 url("images/background/home-banner.jpg");
 
-background-repeat: no-repeat;
+/*
+COVER = IMAGE CROPPED
+Full screen fill
+*/
+
+background-size: cover;
 
 background-position: center center;
 
-background-size: contain;
+background-repeat: no-repeat;
 
 z-index: 0;
 }
 
 
-/* DARK OVERLAY */
+/* HERO DARK OVERLAY */
 
 .hero::after {
-
 content: "";
 
 position: absolute;
@@ -206,8 +154,8 @@ background:
 linear-gradient(
 90deg,
 rgba(0,0,0,0.78) 0%,
-rgba(0,0,0,0.48) 40%,
-rgba(0,0,0,0.12) 100%
+rgba(0,0,0,0.45) 45%,
+rgba(0,0,0,0.15) 100%
 );
 
 z-index: 1;
@@ -217,7 +165,6 @@ z-index: 1;
 /* HERO CONTENT */
 
 .hero-content {
-
 position: relative;
 
 z-index: 2;
@@ -231,9 +178,7 @@ margin: auto;
 padding: 100px 8%;
 }
 
-
 .hero-small {
-
 color: #e00000;
 
 font-size: 15px;
@@ -245,9 +190,7 @@ letter-spacing: 4px;
 margin-bottom: 18px;
 }
 
-
 .hero h1 {
-
 font-size: 72px;
 
 line-height: 1.02;
@@ -259,15 +202,11 @@ text-transform: uppercase;
 max-width: 720px;
 }
 
-
 .hero h1 span {
-
 color: #e00000;
 }
 
-
 .hero-line {
-
 width: 90px;
 
 height: 4px;
@@ -277,9 +216,7 @@ background: #e00000;
 margin: 28px 0;
 }
 
-
 .hero p {
-
 max-width: 620px;
 
 color: #eeeeee;
@@ -295,7 +232,6 @@ BUTTONS
 ===================================================== */
 
 .btn {
-
 display: inline-block;
 
 padding: 14px 30px;
@@ -304,7 +240,7 @@ margin: 5px 8px 5px 0;
 
 background: #e00000;
 
-color: #ffffff;
+color: #fff;
 
 text-decoration: none;
 
@@ -312,46 +248,37 @@ font-weight: bold;
 
 border-radius: 4px;
 
-transition: 0.3s;
+transition: .3s;
 }
-
 
 .btn:hover {
+background: #fff;
 
-background: #ffffff;
-
-color: #000000;
+color: #000;
 }
-
 
 .btn-outline {
-
 background: transparent;
 
-border: 1px solid #ffffff;
+border: 1px solid #fff;
 }
 
-
 .btn-outline:hover {
+background: #fff;
 
-background: #ffffff;
-
-color: #000000;
+color: #000;
 }
 
 
 /* =====================================================
-GENERAL SECTION
+GENERAL SECTIONS
 ===================================================== */
 
 .section {
-
 padding: 80px 8%;
 }
 
-
 .section-title {
-
 max-width: 850px;
 
 text-align: center;
@@ -359,9 +286,7 @@ text-align: center;
 margin: 0 auto 50px;
 }
 
-
 .section-title h2 {
-
 font-size: 40px;
 
 text-transform: uppercase;
@@ -369,33 +294,26 @@ text-transform: uppercase;
 margin-bottom: 12px;
 }
 
-
 .section-title h2 span {
-
 color: #e00000;
 }
 
-
 .section-title p {
-
-color: #999999;
+color: #999;
 
 font-size: 16px;
 }
 
 
 /* =====================================================
-CATEGORIES
+PRODUCT CATEGORIES
 ===================================================== */
 
 .categories {
-
 background: #0d0d0d;
 }
 
-
 .category-grid {
-
 max-width: 1150px;
 
 margin: auto;
@@ -407,9 +325,7 @@ grid-template-columns: repeat(3, 1fr);
 gap: 25px;
 }
 
-
 .category-card {
-
 background: #151515;
 
 border: 1px solid #292929;
@@ -422,30 +338,24 @@ text-align: center;
 
 text-decoration: none;
 
-color: #ffffff;
+color: #fff;
 
-transition: 0.3s;
+transition: .3s;
 }
 
-
 .category-card:hover {
-
 transform: translateY(-8px);
 
 border-color: #e00000;
 }
 
-
 .category-icon {
-
 font-size: 55px;
 
 margin-bottom: 15px;
 }
 
-
 .category-card h3 {
-
 color: #e00000;
 
 margin-bottom: 10px;
@@ -453,10 +363,8 @@ margin-bottom: 10px;
 font-size: 22px;
 }
 
-
 .category-card p {
-
-color: #aaaaaa;
+color: #aaa;
 
 font-size: 15px;
 }
@@ -467,13 +375,10 @@ ABOUT
 ===================================================== */
 
 .about {
-
-background: #111111;
+background: #111;
 }
 
-
 .about-grid {
-
 max-width: 1100px;
 
 margin: auto;
@@ -487,33 +392,25 @@ gap: 50px;
 align-items: center;
 }
 
-
 .about-text h2 {
-
 font-size: 42px;
 
 margin-bottom: 20px;
 }
 
-
 .about-text h2 span {
-
 color: #e00000;
 }
 
-
 .about-text p {
-
-color: #cccccc;
+color: #ccc;
 
 font-size: 17px;
 
 margin-bottom: 18px;
 }
 
-
 .about-image {
-
 border-radius: 10px;
 
 overflow: hidden;
@@ -521,9 +418,7 @@ overflow: hidden;
 border: 1px solid #292929;
 }
 
-
 .about-image img {
-
 width: 100%;
 
 height: 420px;
@@ -535,17 +430,15 @@ display: block;
 
 
 /* =====================================================
-FEATURED IMAGE
+SECOND BACKGROUND / FEATURED IMAGE
+SECOND IMAGE = FULL / UNCROPPED
 ===================================================== */
 
 .featured {
-
 background: #080808;
 }
 
-
 .featured-box {
-
 max-width: 1150px;
 
 margin: auto;
@@ -555,11 +448,17 @@ border-radius: 10px;
 overflow: hidden;
 
 border: 1px solid #292929;
+
+background: #050505;
 }
 
 
-.featured-box img {
+/*
+IMPORTANT:
+Second image is NOT cropped.
+*/
 
+.featured-box img {
 width: 100%;
 
 height: auto;
@@ -575,13 +474,10 @@ VALUES
 ===================================================== */
 
 .values {
-
-background: #111111;
+background: #111;
 }
 
-
 .value-grid {
-
 max-width: 1150px;
 
 margin: auto;
@@ -593,9 +489,7 @@ grid-template-columns: repeat(4, 1fr);
 gap: 20px;
 }
 
-
 .value-box {
-
 background: #080808;
 
 padding: 30px 20px;
@@ -607,18 +501,14 @@ border-bottom: 3px solid #e00000;
 border-radius: 6px;
 }
 
-
 .value-box h3 {
-
 color: #e00000;
 
 margin-bottom: 10px;
 }
 
-
 .value-box p {
-
-color: #999999;
+color: #999;
 
 font-size: 14px;
 }
@@ -629,7 +519,6 @@ CTA
 ===================================================== */
 
 .cta {
-
 padding: 90px 8%;
 
 text-align: center;
@@ -642,18 +531,14 @@ linear-gradient(
 );
 }
 
-
 .cta h2 {
-
 font-size: 42px;
 
 margin-bottom: 15px;
 }
 
-
 .cta p {
-
-color: #cccccc;
+color: #ccc;
 
 max-width: 700px;
 
@@ -666,19 +551,16 @@ FOOTER
 ===================================================== */
 
 footer {
-
-background: #000000;
+background: #000;
 
 padding: 45px 8%;
 
 text-align: center;
 
-border-top: 1px solid #222222;
+border-top: 1px solid #222;
 }
 
-
 .footer-logo img {
-
 width: 90px;
 
 height: 90px;
@@ -686,10 +568,8 @@ height: 90px;
 object-fit: contain;
 }
 
-
 .footer-tagline {
-
-color: #999999;
+color: #999;
 
 font-size: 11px;
 
@@ -698,16 +578,12 @@ letter-spacing: 2px;
 margin: 10px 0 20px;
 }
 
-
 .footer-links {
-
 margin-bottom: 20px;
 }
 
-
 .footer-links a {
-
-color: #aaaaaa;
+color: #aaa;
 
 text-decoration: none;
 
@@ -716,16 +592,12 @@ margin: 0 10px;
 font-size: 14px;
 }
 
-
 .footer-links a:hover {
-
 color: #e00000;
 }
 
-
 footer p {
-
-color: #666666;
+color: #666;
 
 font-size: 13px;
 }
@@ -738,56 +610,40 @@ TABLET
 @media (max-width: 900px) {
 
 header {
-
 min-height: 95px;
 
-padding: 6px 4%;
+padding: 5px 4%;
 }
 
-
 .logo-img {
-
 width: 78px;
 
 height: 78px;
 }
 
-
 nav a {
-
 margin-left: 12px;
 }
 
-
 .hero {
-
 min-height: 680px;
 }
 
-
 .hero h1 {
-
 font-size: 55px;
 }
 
-
 .category-grid {
-
 grid-template-columns: 1fr 1fr;
 }
-
 
 .value-grid {
-
 grid-template-columns: 1fr 1fr;
 }
 
-
 .about-grid {
-
 grid-template-columns: 1fr;
 }
-
 }
 
 
@@ -798,7 +654,6 @@ MOBILE
 @media (max-width: 650px) {
 
 header {
-
 flex-direction: column;
 
 gap: 8px;
@@ -806,37 +661,23 @@ gap: 8px;
 padding: 8px 4%;
 }
 
-
-.logo-area {
-
-gap: 10px;
-}
-
-
 .logo-img {
-
 width: 82px;
 
 height: 82px;
 }
 
-
 .brand-name {
-
 font-size: 24px;
 }
 
-
 nav {
-
 justify-content: center;
 
 text-align: center;
 }
 
-
 nav a {
-
 display: inline-block;
 
 margin: 4px 6px;
@@ -844,86 +685,73 @@ margin: 4px 6px;
 font-size: 13px;
 }
 
-
 .hero {
-
 min-height: 680px;
 }
 
-
 /*
-Mobile par bhi image crop nahi hogi.
+TOP IMAGE STILL CROPPED ON MOBILE
 */
 
 .hero::before {
-
-background-size: contain;
+background-size: cover;
 
 background-position: center center;
 }
 
-
 .hero-content {
-
 padding: 80px 7%;
 }
 
-
 .hero-small {
-
 font-size: 12px;
 
 letter-spacing: 2px;
 }
 
-
 .hero h1 {
-
 font-size: 40px;
 }
 
-
 .hero p {
-
 font-size: 16px;
 }
 
-
 .section {
-
 padding: 60px 6%;
 }
 
-
 .section-title h2 {
-
 font-size: 30px;
 }
 
-
 .category-grid {
-
 grid-template-columns: 1fr;
 }
-
 
 .value-grid {
-
 grid-template-columns: 1fr;
 }
 
-
 .about-image img {
-
 height: 300px;
 }
 
+/*
+SECOND IMAGE FULL
+*/
 
-.cta h2 {
+.featured-box img {
+width: 100%;
 
-font-size: 31px;
+height: auto;
+
+object-fit: contain;
 }
 
+.cta h2 {
+font-size: 31px;
+}
 }
 
 
@@ -934,20 +762,16 @@ SMALL MOBILE
 @media (max-width: 400px) {
 
 .hero h1 {
-
 font-size: 35px;
 }
 
-
 .btn {
-
 display: block;
 
 text-align: center;
 
 margin-right: 0;
 }
-
 }
 
 </style>
@@ -1019,7 +843,7 @@ Contact
 
 
 <!-- =====================================================
-HERO
+TOP HERO
 ===================================================== -->
 
 <section class="hero">
@@ -1032,13 +856,8 @@ ACE SPORTS EQUIPMENT
 
 
 <h1>
-
 WEAR IT LIKE
-
-<span>
-A CHAMP
-</span>
-
+<span>A CHAMP</span>
 </h1>
 
 
@@ -1046,11 +865,9 @@ A CHAMP
 
 
 <p>
-
 Strong equipment for serious training.
 Built for athletes, gyms, academies
 and champions who never stop improving.
-
 </p>
 
 
@@ -1075,7 +892,7 @@ CONTACT US
 
 
 <!-- =====================================================
-CATEGORIES
+PRODUCT CATEGORIES
 ===================================================== -->
 
 <section class="section categories">
@@ -1223,7 +1040,8 @@ alt="ACE Boxing Training"
 
 
 <!-- =====================================================
-FEATURED IMAGE
+SECOND IMAGE
+FULL / UNCROPPED
 ===================================================== -->
 
 <section class="section featured">
@@ -1338,7 +1156,7 @@ to customer satisfaction.
 
 
 <!-- =====================================================
-CONTACT CTA
+CONTACT
 ===================================================== -->
 
 <section class="cta">
@@ -1378,7 +1196,6 @@ FOOTER
 
 <footer>
 
-
 <div class="footer-logo">
 
 <img
@@ -1390,48 +1207,31 @@ alt="ACE Logo"
 
 
 <div class="footer-tagline">
-
 WEAR IT LIKE A CHAMP
-
 </div>
 
 
 <div class="footer-links">
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
-<a href="about.html">
-About
-</a>
+<a href="about.html">About</a>
 
-<a href="products.html">
-Products
-</a>
+<a href="products.html">Products</a>
 
-<a href="gallery.html">
-Gallery
-</a>
+<a href="gallery.html">Gallery</a>
 
-<a href="dealer.html">
-Dealer
-</a>
+<a href="dealer.html">Dealer</a>
 
-<a href="contact.html">
-Contact
-</a>
+<a href="contact.html">Contact</a>
 
 </div>
 
 
 <p>
-
 © 2026 ACE – Wear It Like a Champ.
 All Rights Reserved.
-
 </p>
-
 
 </footer>
 
