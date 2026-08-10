@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Boxing Equipment | ACE</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #0b0b0b;
+color: white;
+}
+
+/* HEADER */
+
+header {
+background: #050505;
+padding: 18px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #292929;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.logo {
+font-size: 30px;
+font-weight: 900;
+color: #e00000;
+letter-spacing: 2px;
+}
+
+.tagline {
+font-size: 10px;
+color: #999;
+letter-spacing: 1px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+font-size: 14px;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #e00000;
+}
+
+/* HERO */
+
+.hero {
+min-height: 430px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 70px 8%;
+
+background:
+linear-gradient(
+rgba(0,0,0,0.75),
+rgba(0,0,0,0.9)
+),
+radial-gradient(
+circle,
+#450000,
+#080808 70%
+);
+}
+
+.hero-content {
+max-width: 900px;
+}
+
+.hero h1 {
+font-size: 58px;
+text-transform: uppercase;
+font-weight: 900;
+}
+
+.hero h1 span {
+color: #e00000;
+}
+
+.hero-line {
+width: 80px;
+height: 4px;
+background: #e00000;
+margin: 22px auto;
+}
+
+.hero p {
+font-size: 19px;
+color: #ccc;
+}
+
+/* SECTION */
+
+.section {
+padding: 70px 8%;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 45px;
+}
+
+.section-title h2 {
+font-size: 38px;
+text-transform: uppercase;
+}
+
+.section-title span {
+color: #e00000;
+}
+
+.section-title p {
+color: #999;
+margin-top: 10px;
+}
+
+/* PRODUCTS */
+
+.products {
+max-width: 1150px;
+margin: auto;
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.product-card {
+background: #151515;
+border: 1px solid #292929;
+border-radius: 8px;
+overflow: hidden;
+transition: 0.3s;
+}
+
+.product-card:hover {
+transform: translateY(-7px);
+border-color: #e00000;
+}
+
+.product-image {
+height: 220px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: #202020;
+font-size: 65px;
+}
+
+.product-info {
+padding: 25px;
+}
+
+.product-info h3 {
+color: #e00000;
+font-size: 22px;
+margin-bottom: 10px;
+}
+
+.product-info p {
+color: #aaa;
+font-size: 15px;
+line-height: 1.6;
+}
+
+.enquiry-btn {
+display: inline-block;
+margin-top: 18px;
+padding: 10px 20px;
+
+background: #e00000;
+color: white;
+
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+}
+
+.enquiry-btn:hover {
+background: white;
+color: black;
+}
+
+/* WHY ACE */
+
+.why {
+background: #111;
+}
+
+.why-grid {
+max-width: 1100px;
+margin: auto;
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+
+.why-box {
+background: #080808;
+padding: 30px 20px;
+text-align: center;
+
+border-bottom: 3px solid #e00000;
+}
+
+.why-box h3 {
+margin-bottom: 10px;
+}
+
+.why-box p {
+color: #999;
+font-size: 14px;
+}
+
+/* CTA */
+
+.cta {
+text-align: center;
+padding: 75px 8%;
+
+background:
+linear-gradient(
+135deg,
+#350000,
+#090909
+);
+}
+
+.cta h2 {
+font-size: 38px;
+margin-bottom: 15px;
+}
+
+.cta p {
+color: #ccc;
+margin-bottom: 25px;
+}
+
+.btn {
+display: inline-block;
+
+padding: 13px 30px;
+
+background: #e00000;
+color: white;
+
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+}
+
+.btn:hover {
+background: white;
+color: black;
+}
+
+/* FOOTER */
+
+footer {
+background: #000;
+padding: 35px;
+text-align: center;
+border-top: 1px solid #222;
+}
+
+footer .footer-logo {
+color: #e00000;
+font-size: 25px;
+font-weight: bold;
+}
+
+footer p {
+color: #777;
+margin-top: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+.products {
+grid-template-columns: 1fr 1fr;
+}
+
+.why-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.hero h1 {
+font-size: 45px;
+}
+}
+
+@media (max-width: 600px) {
+
+header {
+flex-direction: column;
+gap: 15px;
+}
+
+nav {
+text-align: center;
+}
+
+nav a {
+display: inline-block;
+margin: 5px 7px;
+}
+
+.products,
+.why-grid {
+grid-template-columns: 1fr;
+}
+
+.hero h1 {
+font-size: 36px;
+}
+
+.hero p {
+font-size: 16px;
+}
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div>
+<div class="logo">ACE</div>
+<div class="tagline">
+WEAR IT LIKE A CHAMP
+</div>
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="boxing.html">
+Boxing
+</a>
+
+<a href="products.html">
+Products
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="dealer.html">
+Dealer
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+BOXING <span>EQUIPMENT</span>
+</h1>
+
+<div class="hero-line"></div>
+
+<p>
+Professional boxing equipment designed for
+training, performance, protection and durability.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+Boxing <span>Products</span>
+</h2>
+
+<p>
+Explore our range of boxing equipment.
+</p>
+
+</div>
+
+
+<div class="products">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product-card">
+
+<div class="product-image">
+🥊
+</div>
+
+<div class="product-info">
+
+<h3>
+Boxing Gloves
+</h3>
+
+<p>
+Durable boxing gloves designed for
+training, sparring and regular gym use.
+Built for comfort, protection and
+reliable performance.
+</p>
+
+<a href="contact.html"
+class="enquiry-btn">
+
+Enquire Now
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product-card">
+
+<div class="product-image">
+🥊
+</div>
+
+<div class="product-info">
+
+<h3>
+Training Gloves
+</h3>
+
+<p>
+Comfortable training gloves suitable
+for heavy bag work, pad work and
+everyday boxing practice.
+</p>
+
+<a href="contact.html"
+class="enquiry-btn">
+
+Enquire Now
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product-card">
+
+<div class="product-image">
+🛡️
+</div>
+
+<div class="product-info">
+
+<h3>
+Boxing Head Guard
+</h3>
+
+<p>
+Protective headgear designed to provide
+comfort and support during boxing and
+combat-sports training.
+</p>
+
+<a href="contact.html"
+class="enquiry-btn">
+
+Enquire Now
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product-card">
+
+<div class="product-image">
+🥊
+</div>
+
+<div class="product-info">
+
+<h3>
+Boxing Hand Wraps
+</h3>
+
+<p>
+Training wraps designed to support the
+hands and wrists during boxing sessions.
+</p>
+
+<a href="contact.html"
+class="enquiry-btn">
+
+Enquire Now
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 5 -->
+
+<div class="product-card">
+
+<div class="product-image">
+🥋
+</div>
+
+<div class="product-info">
+
+<h3>
+Boxing Protective Gear
+</h3>
+
+<p>
+Essential protective equipment for
+athletes during demanding training
+and sparring sessions.
+</p>
+
+<a href="contact.html"
+class="enquiry-btn">
+
+Enquire Now
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 6 -->
+
+<div class="product-card">
+
+<div class="product-image">
+🎯
+</div>
+
+<div class="product-info">
+
+<h3>
+Boxing Training Gear
+</h3>
+
+<p>
+Training-focused equipment for gyms,
+academies, trainers and serious athletes.
+</p>
+
+<a href="contact.html"
+class="enquiry-btn">
+
+Enquire Now
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY ACE -->
+
+<section class="section why">
+
+<div class="section-title">
+
+<h2>
+Why Choose <span>ACE?</span>
+</h2>
+
+<p>
+Built around the needs of athletes.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why-box">
+
+<h3>
+Quality
+</h3>
+
+<p>
+Attention to materials, construction
+and finishing.
+</p>
+
+</div>
+
+
+<div class="why-box">
+
+<h3>
+Durability
+</h3>
+
+<p>
+Designed for regular and demanding
+training sessions.
+</p>
+
+</div>
+
+
+<div class="why-box">
+
+<h3>
+Comfort
+</h3>
+
+<p>
+Equipment designed with athlete comfort
+in mind.
+</p>
+
+</div>
+
+
+<div class="why-box">
+
+<h3>
+Performance
+</h3>
+
+<p>
+Practical equipment designed to support
+serious training.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+Looking For Boxing Equipment?
+</h2>
+
+<p>
+Contact ACE for product enquiries,
+bulk orders and dealer enquiries.
+</p>
+
+<a href="contact.html" class="btn">
+CONTACT ACE
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+ACE
+</div>
+
+<p>
+WEAR IT LIKE A CHAMP
+</p>
+
+<p>
+© 2026 ACE – Wear It Like a Champ.
+All Rights Reserved.
+</p>
+
+</footer>
+
+
+</body>
+</html>
