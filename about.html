@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Us | ACE Wear It Like a Champ</title>
+<title>About ACE | Wear It Like a Champ</title>
 
 <style>
 * {
@@ -13,105 +13,413 @@ padding: 0;
 box-sizing: border-box;
 }
 
-body {
-font-family: Arial, sans-serif;
-background: #111;
-color: white;
-line-height: 1.6;
+html {
+scroll-behavior: smooth;
 }
 
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #0b0b0b;
+color: #ffffff;
+line-height: 1.7;
+}
+
+/* HEADER */
+
 header {
-background: #000;
-padding: 20px 8%;
+background: #050505;
+padding: 18px 7%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-border-bottom: 1px solid #333;
+position: sticky;
+top: 0;
+z-index: 1000;
+border-bottom: 1px solid #292929;
 }
 
 .logo {
-font-size: 25px;
-font-weight: bold;
+font-size: 30px;
+font-weight: 900;
 color: #e00000;
+letter-spacing: 2px;
+}
+
+.tagline {
+font-size: 10px;
+color: #aaa;
+letter-spacing: 1px;
 }
 
 nav a {
-color: white;
+color: #ffffff;
 text-decoration: none;
-margin-left: 20px;
+margin-left: 22px;
+font-size: 14px;
 font-weight: bold;
+transition: 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
 color: #e00000;
 }
 
-.about-section {
-padding: 80px 10%;
+/* HERO */
+
+.hero {
+min-height: 470px;
+display: flex;
+align-items: center;
+justify-content: center;
 text-align: center;
+padding: 80px 8%;
+background:
+linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.85)),
+radial-gradient(circle at center, #420000, #080808 65%);
 }
 
-.about-section h1 {
-font-size: 45px;
-margin-bottom: 20px;
+.hero-content {
+max-width: 900px;
+}
+
+.hero h1 {
+font-size: 62px;
+font-weight: 900;
+text-transform: uppercase;
+margin-bottom: 15px;
+}
+
+.hero h1 span {
 color: #e00000;
 }
 
-.about-section h2 {
-margin-top: 40px;
-margin-bottom: 15px;
-font-size: 30px;
+.hero p {
+color: #d0d0d0;
+font-size: 20px;
+max-width: 750px;
+margin: auto;
 }
 
-.about-section p {
+.hero-line {
+width: 80px;
+height: 4px;
+background: #e00000;
+margin: 25px auto;
+}
+
+/* GENERAL */
+
+.section {
+padding: 75px 9%;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 45px;
+}
+
+.section-title h2 {
+font-size: 38px;
+text-transform: uppercase;
+margin-bottom: 12px;
+}
+
+.section-title span {
+color: #e00000;
+}
+
+.section-title p {
+color: #999;
+}
+
+.content {
+max-width: 1000px;
+margin: auto;
+}
+
+.content p {
+color: #cfcfcf;
+font-size: 17px;
+margin-bottom: 18px;
+}
+
+/* STORY */
+
+.story {
+background: #111111;
+}
+
+.story-box {
+border-left: 4px solid #e00000;
+padding: 10px 30px;
+}
+
+/* MISSION */
+
+.mission {
+text-align: center;
+background: #070707;
+}
+
+.mission-text {
 max-width: 900px;
 margin: auto;
-color: #ccc;
-font-size: 18px;
+font-size: 24px;
+font-weight: bold;
+color: #ffffff;
 }
 
-.features {
-display: flex;
-justify-content: center;
+.mission-text span {
+color: #e00000;
+}
+
+/* PRODUCTS */
+
+.product-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
 gap: 25px;
-flex-wrap: wrap;
-margin-top: 50px;
+max-width: 1100px;
+margin: auto;
 }
 
-.feature-box {
-background: #1b1b1b;
-padding: 30px;
-width: 260px;
-border-radius: 10px;
-border: 1px solid #333;
+.product-card {
+background: #151515;
+padding: 30px 25px;
+border: 1px solid #292929;
+border-radius: 8px;
+text-align: center;
+transition: 0.3s;
 }
 
-.feature-box h3 {
+.product-card:hover {
+transform: translateY(-7px);
+border-color: #e00000;
+}
+
+.product-card .icon {
+font-size: 40px;
+margin-bottom: 15px;
+}
+
+.product-card h3 {
 color: #e00000;
 margin-bottom: 10px;
 }
 
-footer {
-background: #000;
-text-align: center;
-padding: 25px;
-margin-top: 50px;
+.product-card p {
 color: #aaa;
 }
 
-@media (max-width: 768px) {
+/* VALUES */
+
+.values {
+background: #111111;
+}
+
+.value-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+max-width: 1150px;
+margin: auto;
+}
+
+.value-box {
+background: #080808;
+padding: 28px 20px;
+text-align: center;
+border-bottom: 3px solid #e00000;
+border-radius: 6px;
+}
+
+.value-box h3 {
+margin-bottom: 10px;
+color: #ffffff;
+}
+
+.value-box p {
+color: #999;
+font-size: 14px;
+}
+
+/* QUALITY */
+
+.quality-box {
+max-width: 1050px;
+margin: auto;
+background: #151515;
+padding: 45px;
+border-radius: 10px;
+border: 1px solid #292929;
+}
+
+.quality-box h3 {
+color: #e00000;
+font-size: 27px;
+margin-bottom: 15px;
+}
+
+/* CONTACT */
+
+.contact {
+background: #080808;
+}
+
+.contact-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1050px;
+margin: auto;
+}
+
+.contact-box {
+background: #151515;
+padding: 30px;
+border: 1px solid #292929;
+border-radius: 8px;
+text-align: center;
+}
+
+.contact-box h3 {
+color: #e00000;
+margin-bottom: 12px;
+}
+
+.contact-box p {
+color: #bbb;
+}
+
+.contact-box a {
+color: #ffffff;
+text-decoration: none;
+}
+
+.contact-box a:hover {
+color: #e00000;
+}
+
+/* CTA */
+
+.cta {
+padding: 75px 8%;
+text-align: center;
+background: linear-gradient(135deg, #350000, #090909);
+}
+
+.cta h2 {
+font-size: 38px;
+margin-bottom: 15px;
+}
+
+.cta p {
+color: #ccc;
+margin-bottom: 25px;
+}
+
+.btn {
+display: inline-block;
+padding: 13px 30px;
+background: #e00000;
+color: white;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+transition: 0.3s;
+}
+
+.btn:hover {
+background: #ffffff;
+color: #000000;
+}
+
+/* FOOTER */
+
+footer {
+background: #000000;
+padding: 35px 8%;
+text-align: center;
+border-top: 1px solid #222;
+}
+
+footer .footer-logo {
+font-size: 25px;
+font-weight: bold;
+color: #e00000;
+margin-bottom: 8px;
+}
+
+footer p {
+color: #777;
+font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+.product-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.value-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.contact-grid {
+grid-template-columns: 1fr;
+}
+
+.hero h1 {
+font-size: 48px;
+}
+}
+
+@media (max-width: 650px) {
+
 header {
 flex-direction: column;
 gap: 15px;
 }
 
-nav a {
-margin: 8px;
-display: inline-block;
+nav {
+text-align: center;
 }
 
-.about-section h1 {
-font-size: 35px;
+nav a {
+display: inline-block;
+margin: 5px 7px;
+}
+
+.hero {
+min-height: 400px;
+}
+
+.hero h1 {
+font-size: 38px;
+}
+
+.hero p {
+font-size: 16px;
+}
+
+.section {
+padding: 55px 6%;
+}
+
+.section-title h2 {
+font-size: 30px;
+}
+
+.product-grid,
+.value-grid {
+grid-template-columns: 1fr;
+}
+
+.quality-box {
+padding: 25px;
 }
 }
 </style>
@@ -119,15 +427,18 @@ font-size: 35px;
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-<div class="logo">
-ACE
+<div>
+<div class="logo">ACE</div>
+<div class="tagline">WEAR IT LIKE A CHAMP</div>
 </div>
 
 <nav>
 <a href="index.html">Home</a>
-<a href="about.html">About</a>
+<a href="about.html" class="active">About</a>
 <a href="products.html">Products</a>
 <a href="gallery.html">Gallery</a>
 <a href="dealer.html">Dealer</a>
@@ -137,58 +448,148 @@ ACE
 </header>
 
 
-<section class="about-section">
+<!-- HERO -->
 
-<h1>About ACE</h1>
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>ABOUT <span>ACE</span></h1>
+
+<div class="hero-line"></div>
 
 <p>
-ACE – Wear It Like a Champ is a sports equipment brand
-dedicated to providing reliable and high-quality boxing
-and combat sports equipment.
+Wear It Like a Champ — Built for athletes,
+trainers, gyms and everyone who believes in
+training harder and performing stronger.
 </p>
 
-<h2>Who We Are</h2>
+</div>
+
+</section>
+
+
+<!-- OUR STORY -->
+
+<section class="section story">
+
+<div class="section-title">
+
+<h2>Our <span>Story</span></h2>
+
+<p>Built with passion. Driven by performance.</p>
+
+</div>
+
+<div class="content story-box">
 
 <p>
-We are a manufacturer of boxing and sports equipment,
-focused on quality, durability and performance.
-Our products are designed for athletes, gyms, trainers
-and sports enthusiasts.
+ACE – Wear It Like a Champ is a sports equipment
+brand built around one simple belief:
+when you train with the right equipment,
+you train with confidence.
 </p>
 
-<h2>Our Mission</h2>
+<p>
+ACE was created with a vision to build a trusted
+name in sports equipment by bringing together
+quality materials, skilled workmanship and
+practical product design.
+</p>
 
 <p>
-Our mission is to provide strong, durable and dependable
-sports equipment that helps athletes train harder,
+We understand that sports equipment is more than
+just a product. For an athlete, it becomes part of
+every training session, every challenge and every
+achievement.
+</p>
+
+<p>
+That is why our focus remains on creating equipment
+that is strong, dependable, comfortable and made
+to perform.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MISSION -->
+
+<section class="section mission">
+
+<div class="section-title">
+
+<h2>Our <span>Mission</span></h2>
+
+</div>
+
+<div class="mission-text">
+
+Our mission is to provide athletes with
+<span>strong, durable and dependable</span>
+sports equipment that helps them train harder,
 perform better and feel confident.
-</p>
 
-
-<div class="features">
-
-<div class="feature-box">
-<h3>Quality</h3>
-<p>
-We focus on quality materials and reliable
-manufacturing.
-</p>
 </div>
 
-<div class="feature-box">
-<h3>Durability</h3>
-<p>
-Our products are built to handle demanding
-training sessions.
-</p>
+</section>
+
+
+<!-- WHAT WE DO -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>What We <span>Do</span></h2>
+
+<p>Equipment designed around real training needs.</p>
+
 </div>
 
-<div class="feature-box">
-<h3>Performance</h3>
+<div class="product-grid">
+
+<div class="product-card">
+
+<div class="icon">🥊</div>
+
+<h3>Boxing Equipment</h3>
+
 <p>
-Designed to support athletes during training
-and competition.
+Boxing equipment designed for training,
+practice and demanding sessions.
 </p>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="icon">🥋</div>
+
+<h3>Combat Sports</h3>
+
+<p>
+Equipment for athletes involved in combat
+sports and martial arts training.
+</p>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="icon">🏋️</div>
+
+<h3>Fitness & Training</h3>
+
+<p>
+Practical training equipment for gyms,
+academies and fitness enthusiasts.
+</p>
+
 </div>
 
 </div>
@@ -196,13 +597,286 @@ and competition.
 </section>
 
 
-<footer>
+<!-- QUALITY -->
+
+<section class="section story">
+
+<div class="section-title">
+
+<h2>Quality <span>First</span></h2>
+
+</div>
+
+<div class="quality-box">
+
+<h3>Made With Attention To Detail</h3>
 
 <p>
-© 2026 ACE – Wear It Like a Champ. All Rights Reserved.
+At ACE, quality is not just a final inspection —
+it is part of the entire process.
+</p>
+
+<p>
+We pay attention to material selection,
+stitching, construction, finishing and overall
+product performance.
+</p>
+
+<p>
+Our goal is to deliver equipment that can stand
+up to regular and demanding use.
+</p>
+
+<p>
+<strong>
+Strong materials. Better workmanship.
+Reliable performance.
+</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- VALUES -->
+
+<section class="section values">
+
+<div class="section-title">
+
+<h2>Why Choose <span>ACE?</span></h2>
+
+<p>The values behind our brand.</p>
+
+</div>
+
+<div class="value-grid">
+
+<div class="value-box">
+
+<h3>QUALITY</h3>
+
+<p>
+Carefully selected materials and attention
+to manufacturing details.
+</p>
+
+</div>
+
+
+<div class="value-box">
+
+<h3>DURABILITY</h3>
+
+<p>
+Equipment designed to handle regular and
+demanding training.
+</p>
+
+</div>
+
+
+<div class="value-box">
+
+<h3>PERFORMANCE</h3>
+
+<p>
+Practical designs focused on athletes and
+real training requirements.
+</p>
+
+</div>
+
+
+<div class="value-box">
+
+<h3>RELIABILITY</h3>
+
+<p>
+Consistent products and a commitment to
+customer satisfaction.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VISION -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Our <span>Vision</span></h2>
+
+</div>
+
+<div class="content">
+
+<p>
+Our vision is to build ACE into a recognized and
+trusted sports equipment brand, serving athletes
+and sports communities across India and
+international markets.
+</p>
+
+<p>
+We continuously work towards improving our
+products, expanding our range and maintaining
+the quality that our customers expect.
+</p>
+
+<p>
+We believe there is always a better way to build,
+improve and perform.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CUSTOMER COMMITMENT -->
+
+<section class="section story">
+
+<div class="section-title">
+
+<h2>Our <span>Commitment</span></h2>
+
+</div>
+
+<div class="content">
+
+<p>
+At ACE, we don't just want to sell sports equipment.
+</p>
+
+<p>
+We want to become a part of your training journey.
+</p>
+
+<p>
+From the first day in the gym to the biggest
+challenge in the ring, our aim is to provide
+equipment that athletes can trust.
+</p>
+
+<p>
+<strong>
+Train with confidence.
+Perform with purpose.
+Wear It Like a Champ.
+</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- COMPANY / CONTACT INFORMATION -->
+
+<section class="section contact">
+
+<div class="section-title">
+
+<h2>Company <span>Information</span></h2>
+
+<p>Connect with ACE for business and product enquiries.</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-box">
+
+<h3>Company</h3>
+
+<p>
+ACE – Wear It Like a Champ
+</p>
+
+<p>
+Sports & Combat Sports Equipment
+</p>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>Business Enquiries</h3>
+
+<p>
+For product enquiries, dealer enquiries,
+bulk orders and business partnerships,
+please contact our team.
+</p>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>Location</h3>
+
+<p>
+India
+</p>
+
+<p>
+Add your complete business address here.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT CTA -->
+
+<section class="cta">
+
+<h2>Ready to Work With ACE?</h2>
+
+<p>
+Get in touch with us for products, dealership,
+bulk orders and business enquiries.
+</p>
+
+<a href="contact.html" class="btn">
+CONTACT US
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+ACE
+</div>
+
+<p>
+WEAR IT LIKE A CHAMP
+</p>
+
+<p>
+© 2026 ACE – Wear It Like a Champ.
+All Rights Reserved.
 </p>
 
 </footer>
+
 
 </body>
 </html>
