@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,707 +8,498 @@
 
 <style>
 
-/* =========================
-RESET
-========================= */
-
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-html {
-scroll-behavior: smooth;
+html{
+scroll-behavior:smooth;
 }
 
-body {
-font-family: Arial, Helvetica, sans-serif;
-background: #080808;
-color: #ffffff;
-line-height: 1.6;
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#080808;
+color:#fff;
+line-height:1.6;
 }
 
+/* ================= HEADER ================= */
 
-/* =========================
-HEADER
-========================= */
-
-header {
-background: #050505;
-min-height: 100px;
-padding: 6px 6%;
-
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-position: sticky;
-top: 0;
-z-index: 1000;
-
-border-bottom: 1px solid #292929;
+header{
+background:#050505;
+min-height:105px;
+padding:8px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid #292929;
 }
 
-.logo-area {
-display: flex;
-align-items: center;
-gap: 15px;
+.logo-area{
+display:flex;
+align-items:center;
+gap:14px;
 }
 
-.logo-img {
-width: 90px;
-height: 90px;
-object-fit: contain;
+.logo-img{
+width:82px;
+height:82px;
+object-fit:contain;
 }
 
-.brand-name {
-color: #e00000;
-font-size: 28px;
-font-weight: 900;
-letter-spacing: 3px;
+.brand-name{
+color:#e00000;
+font-size:30px;
+font-weight:900;
+letter-spacing:3px;
 }
 
-.tagline {
-color: #999;
-font-size: 9px;
-letter-spacing: 2px;
+.tagline{
+color:#999;
+font-size:9px;
+letter-spacing:2px;
 }
 
-nav {
-display: flex;
-align-items: center;
-flex-wrap: wrap;
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-nav a {
-color: #ffffff;
-text-decoration: none;
-
-margin-left: 22px;
-
-font-size: 14px;
-font-weight: bold;
-
-transition: 0.3s;
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+font-weight:bold;
+transition:.3s;
 }
 
 nav a:hover,
-nav a.active {
-color: #e00000;
+nav a.active{
+color:#e00000;
 }
 
 
-/* =========================
-HERO
-========================= */
+/* ================= HERO ================= */
 
-.hero {
-min-height: 500px;
-
-display: flex;
-align-items: center;
-justify-content: center;
-
-text-align: center;
-
-padding: 80px 8%;
+.hero{
+min-height:500px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:80px 8%;
 
 background:
 linear-gradient(
-rgba(0,0,0,0.68),
-rgba(0,0,0,0.88)
+rgba(0,0,0,.62),
+rgba(0,0,0,.88)
 ),
 url("images/background/home-banner.jpg");
 
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
-.hero-content {
-max-width: 900px;
+.hero-content{
+max-width:900px;
 }
 
-.hero-small {
-color: #e00000;
-
-font-size: 14px;
-font-weight: bold;
-
-letter-spacing: 4px;
-
-margin-bottom: 15px;
+.hero-small{
+color:#e00000;
+font-size:14px;
+font-weight:bold;
+letter-spacing:4px;
+margin-bottom:15px;
 }
 
-.hero h1 {
-font-size: 65px;
-
-font-weight: 900;
-
-text-transform: uppercase;
-
-line-height: 1.1;
+.hero h1{
+font-size:65px;
+font-weight:900;
+text-transform:uppercase;
+line-height:1.1;
 }
 
-.hero h1 span {
-color: #e00000;
+.hero h1 span{
+color:#e00000;
 }
-
-.hero-line {
-width: 90px;
-height: 4px;
 
-background: #e00000;
-
-margin: 25px auto;
+.hero-line{
+width:90px;
+height:4px;
+background:#e00000;
+margin:25px auto;
 }
-
-.hero p {
-color: #d0d0d0;
-
-font-size: 18px;
-
-max-width: 700px;
 
-margin: auto;
+.hero p{
+color:#d0d0d0;
+font-size:18px;
+max-width:720px;
+margin:auto;
 }
-
-
-/* =========================
-CATEGORY NAVIGATION
-========================= */
-
-.category-nav {
-background: #111111;
-
-padding: 25px 6%;
 
-border-bottom: 1px solid #292929;
 
-position: sticky;
-top: 100px;
+/* ================= CATEGORY MENU ================= */
 
-z-index: 900;
+.category-nav{
+background:#111;
+padding:22px 5%;
+border-bottom:1px solid #292929;
 }
 
-.category-nav-inner {
-max-width: 1250px;
-
-margin: auto;
-
-display: flex;
-
-justify-content: center;
-
-gap: 10px;
-
-flex-wrap: wrap;
+.category-nav-inner{
+max-width:1250px;
+margin:auto;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:9px;
 }
-
-.category-nav a {
-color: #cccccc;
-
-text-decoration: none;
-
-padding: 9px 15px;
 
-border: 1px solid #333;
-
-border-radius: 4px;
-
-font-size: 13px;
-
-transition: 0.3s;
+.category-nav a{
+color:#ccc;
+text-decoration:none;
+padding:9px 14px;
+border:1px solid #333;
+border-radius:4px;
+font-size:13px;
+transition:.3s;
 }
-
-.category-nav a:hover {
-background: #e00000;
 
-border-color: #e00000;
-
-color: #ffffff;
+.category-nav a:hover{
+background:#e00000;
+border-color:#e00000;
+color:#fff;
 }
-
 
-/* =========================
-GENERAL SECTION
-========================= */
-
-.section {
-padding: 75px 6%;
-}
 
-.section-title {
-text-align: center;
+/* ================= SECTION ================= */
 
-margin-bottom: 45px;
+.section{
+padding:75px 6%;
 }
 
-.section-title h2 {
-font-size: 38px;
-
-text-transform: uppercase;
-
-margin-bottom: 10px;
+.product-section{
+border-bottom:1px solid #222;
 }
 
-.section-title h2 span {
-color: #e00000;
+.product-section:nth-of-type(even){
+background:#111;
 }
-
-.section-title p {
-color: #999;
 
-font-size: 15px;
+.section-title{
+text-align:center;
+margin-bottom:45px;
 }
 
-
-/* =========================
-CATEGORY SECTION
-========================= */
-
-.product-section {
-background: #080808;
-
-border-bottom: 1px solid #202020;
+.section-title h2{
+font-size:38px;
+text-transform:uppercase;
+margin-bottom:10px;
 }
 
-.product-section:nth-child(even) {
-background: #111111;
+.section-title h2 span{
+color:#e00000;
 }
-
 
-/* =========================
-PRODUCT GRID
-========================= */
-
-.product-grid {
-max-width: 1250px;
-
-margin: auto;
-
-display: grid;
-
-grid-template-columns:
-repeat(4, 1fr);
-
-gap: 22px;
+.section-title p{
+color:#999;
+font-size:15px;
 }
-
-
-/* =========================
-PRODUCT CARD
-========================= */
-
-.product-card {
-background: #161616;
 
-border: 1px solid #2b2b2b;
 
-border-radius: 8px;
+/* ================= PRODUCT GRID ================= */
 
-overflow: hidden;
-
-transition: 0.3s;
+.product-grid{
+max-width:1250px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
 }
 
-.product-card:hover {
-transform: translateY(-7px);
 
-border-color: #e00000;
+/* ================= PRODUCT CARD ================= */
 
-box-shadow:
-0 10px 30px rgba(0,0,0,0.45);
+.product-card{
+background:#161616;
+border:1px solid #2b2b2b;
+border-radius:8px;
+overflow:hidden;
+transition:.3s;
 }
-
-
-/* =========================
-PRODUCT IMAGE
-========================= */
-
-.product-image {
-width: 100%;
-
-height: 260px;
-
-background: #ffffff;
-
-display: flex;
-
-align-items: center;
 
-justify-content: center;
-
-overflow: hidden;
+.product-card:hover{
+transform:translateY(-7px);
+border-color:#e00000;
+box-shadow:0 12px 30px rgba(0,0,0,.5);
 }
-
-.product-image img {
-width: 100%;
-
-height: 100%;
-
-object-fit: contain;
 
-display: block;
 
-transition: 0.3s;
-}
+/* ================= IMAGE ================= */
 
-.product-card:hover .product-image img {
-transform: scale(1.05);
+.product-image{
+width:100%;
+height:260px;
+background:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
 }
-
-
-/* =========================
-PRODUCT INFO
-========================= */
-
-.product-info {
-padding: 20px;
 
-text-align: center;
+.product-image img{
+width:100%;
+height:100%;
+object-fit:contain;
+display:block;
+transition:.3s;
 }
 
-.product-number {
-color: #777;
-
-font-size: 11px;
-
-letter-spacing: 2px;
-
-margin-bottom: 5px;
+.product-card:hover .product-image img{
+transform:scale(1.05);
 }
 
-.product-info h3 {
-color: #ffffff;
 
-font-size: 18px;
+/* ================= PRODUCT INFO ================= */
 
-margin-bottom: 8px;
+.product-info{
+padding:20px;
+text-align:center;
 }
 
-.product-info p {
-color: #999;
-
-font-size: 13px;
-
-margin-bottom: 15px;
+.product-number{
+color:#777;
+font-size:10px;
+letter-spacing:2px;
+margin-bottom:5px;
 }
-
-
-/* =========================
-BUTTON
-========================= */
-
-.product-btn {
-display: inline-block;
-
-padding: 9px 18px;
-
-background: #e00000;
-
-color: #ffffff;
-
-text-decoration: none;
-
-font-size: 12px;
-
-font-weight: bold;
-
-border-radius: 3px;
 
-transition: 0.3s;
+.product-info h3{
+color:#fff;
+font-size:18px;
+margin-bottom:8px;
 }
 
-.product-btn:hover {
-background: #ffffff;
-
-color: #000000;
+.product-info p{
+color:#999;
+font-size:13px;
+margin-bottom:15px;
 }
-
-
-/* =========================
-CTA
-========================= */
-
-.cta {
-padding: 85px 8%;
 
-text-align: center;
-
-background:
-linear-gradient(
-135deg,
-#350000,
-#090909
-);
+.product-btn{
+display:inline-block;
+padding:9px 20px;
+background:#e00000;
+color:#fff;
+text-decoration:none;
+font-size:12px;
+font-weight:bold;
+border-radius:3px;
+transition:.3s;
 }
-
-.cta h2 {
-font-size: 40px;
 
-margin-bottom: 15px;
+.product-btn:hover{
+background:#fff;
+color:#000;
 }
 
-.cta p {
-color: #cccccc;
 
-max-width: 700px;
+/* ================= CTA ================= */
 
-margin: 0 auto 25px;
+.cta{
+padding:85px 8%;
+text-align:center;
+background:linear-gradient(135deg,#350000,#090909);
 }
-
-.btn {
-display: inline-block;
-
-padding: 13px 30px;
 
-background: #e00000;
-
-color: #ffffff;
-
-text-decoration: none;
-
-font-weight: bold;
-
-border-radius: 4px;
-
-transition: 0.3s;
+.cta h2{
+font-size:40px;
+margin-bottom:15px;
 }
-
-.btn:hover {
-background: #ffffff;
 
-color: #000000;
+.cta p{
+color:#ccc;
+max-width:700px;
+margin:0 auto 25px;
 }
-
-
-/* =========================
-FOOTER
-========================= */
 
-footer {
-background: #000000;
-
-padding: 45px 8%;
-
-text-align: center;
-
-border-top: 1px solid #222222;
+.btn{
+display:inline-block;
+padding:13px 30px;
+background:#e00000;
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+border-radius:4px;
+transition:.3s;
 }
-
-.footer-logo img {
-width: 90px;
 
-height: 90px;
-
-object-fit: contain;
+.btn:hover{
+background:#fff;
+color:#000;
 }
-
-.footer-tagline {
-color: #999999;
 
-font-size: 10px;
 
-letter-spacing: 2px;
+/* ================= FOOTER ================= */
 
-margin: 8px 0 20px;
+footer{
+background:#000;
+padding:45px 8%;
+text-align:center;
+border-top:1px solid #222;
 }
 
-.footer-links {
-margin-bottom: 20px;
+.footer-logo img{
+width:82px;
+height:82px;
+object-fit:contain;
 }
-
-.footer-links a {
-color: #888888;
-
-text-decoration: none;
 
-margin: 0 10px;
-
-font-size: 13px;
+.footer-tagline{
+color:#888;
+font-size:10px;
+letter-spacing:2px;
+margin:8px 0 20px;
 }
 
-.footer-links a:hover {
-color: #e00000;
+.footer-links{
+margin-bottom:20px;
 }
-
-footer p {
-color: #666666;
 
-font-size: 13px;
+.footer-links a{
+color:#777;
+text-decoration:none;
+margin:0 9px;
+font-size:13px;
 }
-
-
-/* =========================
-TABLET
-========================= */
 
-@media (max-width: 1100px) {
-
-.product-grid {
-grid-template-columns:
-repeat(3, 1fr);
+.footer-links a:hover{
+color:#e00000;
 }
 
+footer p{
+color:#666;
+font-size:13px;
 }
 
 
-/* =========================
-SMALL TABLET
-========================= */
+/* ================= TABLET ================= */
 
-@media (max-width: 850px) {
+@media(max-width:1100px){
 
-header {
-padding: 8px 4%;
+.product-grid{
+grid-template-columns:repeat(3,1fr);
 }
 
-.logo-img {
-width: 75px;
-height: 75px;
 }
 
-nav a {
-margin-left: 12px;
-}
 
-.category-nav {
-top: 95px;
-}
+/* ================= SMALL TABLET ================= */
 
-.product-grid {
-grid-template-columns:
-repeat(2, 1fr);
-}
+@media(max-width:850px){
 
-.hero h1 {
-font-size: 52px;
+header{
+padding:8px 4%;
 }
 
+.logo-img{
+width:72px;
+height:72px;
 }
 
-
-/* =========================
-MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-header {
-flex-direction: column;
-
-gap: 8px;
-
-padding: 8px 4%;
+nav a{
+margin-left:12px;
 }
 
-.logo-img {
-width: 80px;
-height: 80px;
+.product-grid{
+grid-template-columns:repeat(2,1fr);
 }
 
-.brand-name {
-font-size: 24px;
+.hero h1{
+font-size:52px;
 }
-
-nav {
-justify-content: center;
 
-text-align: center;
 }
-
-nav a {
-display: inline-block;
-
-margin: 4px 6px;
 
-font-size: 12px;
-}
 
-.hero {
-min-height: 480px;
+/* ================= MOBILE ================= */
 
-padding: 70px 6%;
-}
+@media(max-width:600px){
 
-.hero h1 {
-font-size: 40px;
+header{
+flex-direction:column;
+gap:8px;
 }
 
-.hero p {
-font-size: 16px;
+.logo-img{
+width:78px;
+height:78px;
 }
-
-.category-nav {
-position: relative;
-
-top: 0;
 
-padding: 18px 5%;
+.brand-name{
+font-size:24px;
 }
 
-.category-nav-inner {
-gap: 7px;
+nav{
+text-align:center;
 }
 
-.category-nav a {
-font-size: 11px;
-
-padding: 7px 10px;
+nav a{
+display:inline-block;
+margin:4px 6px;
+font-size:12px;
 }
 
-.section {
-padding: 60px 5%;
+.hero{
+min-height:450px;
 }
 
-.section-title h2 {
-font-size: 30px;
+.hero h1{
+font-size:40px;
 }
 
-.product-grid {
-grid-template-columns: 1fr;
+.hero p{
+font-size:16px;
 }
 
-.product-image {
-height: 300px;
+.section{
+padding:60px 5%;
 }
 
-.cta h2 {
-font-size: 30px;
+.section-title h2{
+font-size:30px;
 }
 
+.product-grid{
+grid-template-columns:1fr;
 }
-
-
-/* =========================
-VERY SMALL MOBILE
-========================= */
-
-@media (max-width: 380px) {
 
-.hero h1 {
-font-size: 34px;
+.product-image{
+height:300px;
 }
 
-.product-image {
-height: 270px;
+.cta h2{
+font-size:30px;
 }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-HEADER
-===================================================== -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -769,9 +558,7 @@ Contact
 
 
 
-<!-- =====================================================
-HERO
-===================================================== -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -782,8 +569,7 @@ ACE SPORTS EQUIPMENT
 </div>
 
 <h1>
-OUR
-<span>PRODUCTS</span>
+OUR <span>PRODUCTS</span>
 </h1>
 
 <div class="hero-line"></div>
@@ -800,9 +586,7 @@ and training equipment.
 
 
 
-<!-- =====================================================
-CATEGORY NAVIGATION
-===================================================== -->
+<!-- ================= CATEGORY MENU ================= -->
 
 <div class="category-nav">
 
@@ -842,14 +626,11 @@ Training Accessories
 
 
 
-<!-- =====================================================
+<!-- ==================================================
 BOXING GLOVES
-===================================================== -->
+================================================== -->
 
-<section
-class="section product-section"
-id="boxing-gloves"
->
+<section class="section product-section" id="boxing-gloves">
 
 <div class="section-title">
 
@@ -858,322 +639,22 @@ Boxing <span>Gloves</span>
 </h2>
 
 <p>
-Training and performance boxing gloves
-from the ACE collection.
+ACE boxing gloves for training and performance.
 </p>
 
 </div>
 
-
-<div class="product-grid">
-
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/boxing%20gloves/bx1.png"
-alt="ACE Boxing Gloves 1"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING GLOVES 01
-</div>
-
-<h3>
-ACE Boxing Gloves
-</h3>
-
-<p>
-Training boxing gloves designed
-for comfort and performance.
-</p>
-
-<a
-href="contact.html"
-class="product-btn"
->
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/boxing%20gloves/bx2.png"
-alt="ACE Boxing Gloves 2"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING GLOVES 02
-</div>
-
-<h3>ACE Boxing Gloves</h3>
-
-<p>
-Built for regular training
-and demanding sessions.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/boxing%20gloves/bx3.png"
-alt="ACE Boxing Gloves 3"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING GLOVES 03
-</div>
-
-<h3>ACE Boxing Gloves</h3>
-
-<p>
-Practical design for
-serious boxing training.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/boxing%20gloves/bx4.png"
-alt="ACE Boxing Gloves 4"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING GLOVES 04
-</div>
-
-<h3>ACE Boxing Gloves</h3>
-
-<p>
-Designed around comfort,
-fit and training needs.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/boxing%20gloves/bx5.png"
-alt="ACE Boxing Gloves 5"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING GLOVES 05
-</div>
-
-<h3>ACE Boxing Gloves</h3>
-
-<p>
-Reliable equipment for
-everyday boxing practice.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/boxing%20gloves/bx6.png"
-alt="ACE Boxing Gloves 6"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING GLOVES 06
-</div>
-
-<h3>ACE Boxing Gloves</h3>
-
-<p>
-Made for focused training
-and performance.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/boxing%20gloves/bx7.png"
-alt="ACE Boxing Gloves 7"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING GLOVES 07
-</div>
-
-<h3>ACE Boxing Gloves</h3>
-
-<p>
-Strong construction for
-regular training use.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/boxing%20gloves/bx8.png"
-alt="ACE Boxing Gloves 8"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING GLOVES 08
-</div>
-
-<h3>ACE Boxing Gloves</h3>
-
-<p>
-Comfortable equipment
-for serious athletes.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/boxing%20gloves/bx9.png"
-alt="ACE Boxing Gloves 9"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING GLOVES 09
-</div>
-
-<h3>ACE Boxing Gloves</h3>
-
-<p>
-Built to support
-demanding training.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-</div>
+<div class="product-grid" id="boxing-gloves-grid"></div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==================================================
 HEADGUARDS
-===================================================== -->
+================================================== -->
 
-<section
-class="section product-section"
-id="headguards"
->
+<section class="section product-section" id="headguards">
 
 <div class="section-title">
 
@@ -1182,228 +663,22 @@ id="headguards"
 </h2>
 
 <p>
-Protective headgear for boxing
-and combat sports training.
+Protective headgear for boxing and combat sports.
 </p>
 
 </div>
 
-
-<div class="product-grid">
-
-
-<!-- HG 1 -->
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/headguard/hg1.png"
-alt="ACE Headguard 1"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-HEADGUARD 01
-</div>
-
-<h3>ACE Headguard</h3>
-
-<p>
-Protective training headgear
-for combat athletes.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-<!-- HG 2 -->
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/headguard/hg2.png"
-alt="ACE Headguard 2"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-HEADGUARD 02
-</div>
-
-<h3>ACE Headguard</h3>
-
-<p>
-Designed for comfortable
-training protection.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-<!-- HG 3 -->
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/headguard/hg3.png"
-alt="ACE Headguard 3"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-HEADGUARD 03
-</div>
-
-<h3>ACE Headguard</h3>
-
-<p>
-Built for regular
-combat sports training.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-<!-- HG 4 -->
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/headguard/hg4.png"
-alt="ACE Headguard 4"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-HEADGUARD 04
-</div>
-
-<h3>ACE Headguard</h3>
-
-<p>
-Practical protective
-equipment for athletes.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-<!-- HG 5 -->
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/headguard/hg5.png"
-alt="ACE Headguard 5"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-HEADGUARD 05
-</div>
-
-<h3>ACE Headguard</h3>
-
-<p>
-Designed for demanding
-training sessions.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-<!-- HG 6 -->
-
-<div class="product-card">
-
-<div class="product-image">
-<img
-src="products/headguard/hg6.png"
-alt="ACE Headguard 6"
->
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-HEADGUARD 06
-</div>
-
-<h3>ACE Headguard</h3>
-
-<p>
-Reliable protection
-for combat sports training.
-</p>
-
-<a href="contact.html" class="product-btn">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-
-</div>
+<div class="product-grid" id="headguards-grid"></div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==================================================
 BOXING EQUIPMENT
-===================================================== -->
+================================================== -->
 
-<section
-class="section product-section"
-id="boxing-equipment"
->
+<section class="section product-section" id="boxing-equipment">
 
 <div class="section-title">
 
@@ -1412,82 +687,22 @@ Boxing <span>Equipment</span>
 </h2>
 
 <p>
-Essential equipment for boxing
-gyms, athletes and trainers.
+Equipment for boxing gyms, athletes and trainers.
 </p>
 
 </div>
 
-
-<div class="product-grid">
-
-
-<!-- BE 1-9 -->
-
-<script>
-
-for (let i = 1; i <= 9; i++) {
-
-document.write(`
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="products/boxing%20equipment/be${i}.png"
-alt="ACE Boxing Equipment ${i}"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-BOXING EQUIPMENT ${String(i).padStart(2,'0')}
-</div>
-
-<h3>
-ACE Boxing Equipment
-</h3>
-
-<p>
-Quality equipment for
-boxing training and practice.
-</p>
-
-<a
-href="contact.html"
-class="product-btn"
->
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-`);
-
-}
-
-</script>
-
-
-</div>
+<div class="product-grid" id="boxing-equipment-grid"></div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==================================================
 COMBAT SPORTS
-===================================================== -->
+================================================== -->
 
-<section
-class="section product-section"
-id="combat-sports"
->
+<section class="section product-section" id="combat-sports">
 
 <div class="section-title">
 
@@ -1496,80 +711,22 @@ Combat <span>Sports</span>
 </h2>
 
 <p>
-Equipment designed for combat sports
-and martial arts training.
+Equipment for combat sports and martial arts.
 </p>
 
 </div>
 
-
-<div class="product-grid">
-
-
-<script>
-
-for (let i = 1; i <= 9; i++) {
-
-document.write(`
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="products/combat%20sports/cs${i}.png"
-alt="ACE Combat Sports ${i}"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-COMBAT SPORTS ${String(i).padStart(2,'0')}
-</div>
-
-<h3>
-ACE Combat Sports
-</h3>
-
-<p>
-Equipment for combat,
-martial arts and training.
-</p>
-
-<a
-href="contact.html"
-class="product-btn"
->
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-`);
-
-}
-
-</script>
-
-
-</div>
+<div class="product-grid" id="combat-sports-grid"></div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==================================================
 FITNESS & TRAINING
-===================================================== -->
+================================================== -->
 
-<section
-class="section product-section"
-id="fitness-training"
->
+<section class="section product-section" id="fitness-training">
 
 <div class="section-title">
 
@@ -1578,80 +735,22 @@ Fitness & <span>Training</span>
 </h2>
 
 <p>
-Training equipment for gyms,
-athletes and fitness enthusiasts.
+Practical equipment for gyms and training.
 </p>
 
 </div>
 
-
-<div class="product-grid">
-
-
-<script>
-
-for (let i = 1; i <= 10; i++) {
-
-document.write(`
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="products/fitness%20%26%20training/ft${i}.png"
-alt="ACE Fitness Training ${i}"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-FITNESS & TRAINING ${String(i).padStart(2,'0')}
-</div>
-
-<h3>
-ACE Fitness & Training
-</h3>
-
-<p>
-Practical equipment for
-effective training sessions.
-</p>
-
-<a
-href="contact.html"
-class="product-btn"
->
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-`);
-
-}
-
-</script>
-
-
-</div>
+<div class="product-grid" id="fitness-training-grid"></div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==================================================
 PROTECTIVE EQUIPMENT
-===================================================== -->
+================================================== -->
 
-<section
-class="section product-section"
-id="protective-equipment"
->
+<section class="section product-section" id="protective-equipment">
 
 <div class="section-title">
 
@@ -1660,80 +759,22 @@ Protective <span>Equipment</span>
 </h2>
 
 <p>
-Protective equipment built around
-training and athlete requirements.
+Protective equipment for training and sports.
 </p>
 
 </div>
 
-
-<div class="product-grid">
-
-
-<script>
-
-for (let i = 1; i <= 10; i++) {
-
-document.write(`
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="products/protective%20equipments/pe${i}.png"
-alt="ACE Protective Equipment ${i}"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-PROTECTIVE EQUIPMENT ${String(i).padStart(2,'0')}
-</div>
-
-<h3>
-ACE Protective Equipment
-</h3>
-
-<p>
-Protective gear designed
-for regular training use.
-</p>
-
-<a
-href="contact.html"
-class="product-btn"
->
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-`);
-
-}
-
-</script>
-
-
-</div>
+<div class="product-grid" id="protective-equipment-grid"></div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==================================================
 TRAINING ACCESSORIES
-===================================================== -->
+================================================== -->
 
-<section
-class="section product-section"
-id="training-accessories"
->
+<section class="section product-section" id="training-accessories">
 
 <div class="section-title">
 
@@ -1742,75 +783,18 @@ Training <span>Accessories</span>
 </h2>
 
 <p>
-Useful training accessories for gyms,
-athletes and coaches.
+Training accessories for athletes, gyms and coaches.
 </p>
 
 </div>
 
-
-<div class="product-grid">
-
-
-<script>
-
-for (let i = 1; i <= 11; i++) {
-
-document.write(`
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="products/training%20acessories/ta${i}.png"
-alt="ACE Training Accessory ${i}"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-TRAINING ACCESSORY ${String(i).padStart(2,'0')}
-</div>
-
-<h3>
-ACE Training Accessory
-</h3>
-
-<p>
-Practical accessories for
-focused training sessions.
-</p>
-
-<a
-href="contact.html"
-class="product-btn"
->
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-
-`);
-
-}
-
-</script>
-
-
-</div>
+<div class="product-grid" id="training-accessories-grid"></div>
 
 </section>
 
 
 
-<!-- =====================================================
-CTA
-===================================================== -->
+<!-- ================= CTA ================= -->
 
 <section class="cta">
 
@@ -1824,10 +808,7 @@ bulk orders, dealership enquiries
 and business partnerships.
 </p>
 
-<a
-href="contact.html"
-class="btn"
->
+<a href="contact.html" class="btn">
 CONTACT ACE
 </a>
 
@@ -1835,9 +816,7 @@ CONTACT ACE
 
 
 
-<!-- =====================================================
-FOOTER
-===================================================== -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1850,40 +829,20 @@ alt="ACE Logo"
 
 </div>
 
-
 <div class="footer-tagline">
 WEAR IT LIKE A CHAMP
 </div>
 
-
 <div class="footer-links">
 
-<a href="index.html">
-Home
-</a>
-
-<a href="about.html">
-About
-</a>
-
-<a href="products.html">
-Products
-</a>
-
-<a href="gallery.html">
-Gallery
-</a>
-
-<a href="dealer.html">
-Dealer
-</a>
-
-<a href="contact.html">
-Contact
-</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="products.html">Products</a>
+<a href="gallery.html">Gallery</a>
+<a href="dealer.html">Dealer</a>
+<a href="contact.html">Contact</a>
 
 </div>
-
 
 <p>
 © 2026 ACE – Wear It Like a Champ.
@@ -1891,6 +850,160 @@ All Rights Reserved.
 </p>
 
 </footer>
+
+
+
+<script>
+
+/* =====================================================
+PRODUCT CARD GENERATOR
+===================================================== */
+
+function createProducts(
+gridId,
+folder,
+prefix,
+total,
+title,
+description
+){
+
+const grid = document.getElementById(gridId);
+
+for(let i = 1; i <= total; i++){
+
+const card = document.createElement("div");
+
+card.className = "product-card";
+
+card.innerHTML = `
+
+<div class="product-image">
+
+<img
+src="images/products/${folder}/${prefix}${i}.png"
+alt="ACE ${title} ${i}"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+${title.toUpperCase()} ${String(i).padStart(2,"0")}
+</div>
+
+<h3>
+ACE ${title}
+</h3>
+
+<p>
+${description}
+</p>
+
+<a
+href="contact.html"
+class="product-btn"
+>
+ENQUIRE
+</a>
+
+</div>
+
+`;
+
+grid.appendChild(card);
+
+}
+
+}
+
+
+/* ================= BOXING GLOVES ================= */
+
+createProducts(
+"boxing-gloves-grid",
+"boxing-gloves",
+"bx",
+9,
+"Boxing Gloves",
+"Training gloves designed for comfort and performance."
+);
+
+
+/* ================= HEADGUARDS ================= */
+
+createProducts(
+"headguards-grid",
+"headguard",
+"hg",
+6,
+"Headguard",
+"Protective headgear designed for boxing training."
+);
+
+
+/* ================= BOXING EQUIPMENT ================= */
+
+createProducts(
+"boxing-equipment-grid",
+"boxing-equipment",
+"be",
+9,
+"Boxing Equipment",
+"Quality equipment for boxing training and practice."
+);
+
+
+/* ================= COMBAT SPORTS ================= */
+
+createProducts(
+"combat-sports-grid",
+"combat-sports",
+"cs",
+9,
+"Combat Sports",
+"Equipment for combat sports and martial arts training."
+);
+
+
+/* ================= FITNESS & TRAINING ================= */
+
+createProducts(
+"fitness-training-grid",
+"fitness-training",
+"ft",
+10,
+"Fitness & Training",
+"Practical equipment for effective training sessions."
+);
+
+
+/* ================= PROTECTIVE EQUIPMENT ================= */
+
+createProducts(
+"protective-equipment-grid",
+"protective-equipments",
+"pe",
+10,
+"Protective Equipment",
+"Protective gear designed for regular training use."
+);
+
+
+/* ================= TRAINING ACCESSORIES ================= */
+
+createProducts(
+"training-accessories-grid",
+"training-accessories",
+"ta",
+11,
+"Training Accessories",
+"Practical accessories for focused training sessions."
+);
+
+</script>
 
 
 </body>
