@@ -7,6 +7,7 @@
 <title>About ACE | Wear It Like a Champ</title>
 
 <style>
+
 * {
 margin: 0;
 padding: 0;
@@ -24,7 +25,8 @@ color: #ffffff;
 line-height: 1.7;
 }
 
-/* HEADER */
+
+/* ================= HEADER ================= */
 
 header {
 background: #050505;
@@ -65,7 +67,8 @@ nav a.active {
 color: #e00000;
 }
 
-/* HERO */
+
+/* ================= HERO ================= */
 
 .hero {
 min-height: 470px;
@@ -74,9 +77,17 @@ align-items: center;
 justify-content: center;
 text-align: center;
 padding: 80px 8%;
+
 background:
-linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.85)),
-radial-gradient(circle at center, #420000, #080808 65%);
+linear-gradient(
+rgba(0,0,0,0.72),
+rgba(0,0,0,0.85)
+),
+radial-gradient(
+circle at center,
+#420000,
+#080808 65%
+);
 }
 
 .hero-content {
@@ -108,7 +119,8 @@ background: #e00000;
 margin: 25px auto;
 }
 
-/* GENERAL */
+
+/* ================= GENERAL ================= */
 
 .section {
 padding: 75px 9%;
@@ -144,7 +156,8 @@ font-size: 17px;
 margin-bottom: 18px;
 }
 
-/* STORY */
+
+/* ================= STORY ================= */
 
 .story {
 background: #111111;
@@ -155,7 +168,8 @@ border-left: 4px solid #e00000;
 padding: 10px 30px;
 }
 
-/* MISSION */
+
+/* ================= MISSION ================= */
 
 .mission {
 text-align: center;
@@ -174,7 +188,8 @@ color: #ffffff;
 color: #e00000;
 }
 
-/* PRODUCTS */
+
+/* ================= PRODUCTS / WHAT WE DO ================= */
 
 .product-grid {
 display: grid;
@@ -184,6 +199,11 @@ max-width: 1100px;
 margin: auto;
 }
 
+
+/* IMPORTANT:
+This works for both DIV cards and clickable A cards
+*/
+
 .product-card {
 background: #151515;
 padding: 30px 25px;
@@ -191,6 +211,10 @@ border: 1px solid #292929;
 border-radius: 8px;
 text-align: center;
 transition: 0.3s;
+
+text-decoration: none;
+color: inherit;
+display: block;
 }
 
 .product-card:hover {
@@ -212,7 +236,8 @@ margin-bottom: 10px;
 color: #aaa;
 }
 
-/* VALUES */
+
+/* ================= VALUES ================= */
 
 .values {
 background: #111111;
@@ -244,7 +269,8 @@ color: #999;
 font-size: 14px;
 }
 
-/* QUALITY */
+
+/* ================= QUALITY ================= */
 
 .quality-box {
 max-width: 1050px;
@@ -261,7 +287,8 @@ font-size: 27px;
 margin-bottom: 15px;
 }
 
-/* CONTACT */
+
+/* ================= CONTACT ================= */
 
 .contact {
 background: #080808;
@@ -301,12 +328,17 @@ text-decoration: none;
 color: #e00000;
 }
 
-/* CTA */
+
+/* ================= CTA ================= */
 
 .cta {
 padding: 75px 8%;
 text-align: center;
-background: linear-gradient(135deg, #350000, #090909);
+background: linear-gradient(
+135deg,
+#350000,
+#090909
+);
 }
 
 .cta h2 {
@@ -335,7 +367,8 @@ background: #ffffff;
 color: #000000;
 }
 
-/* FOOTER */
+
+/* ================= FOOTER ================= */
 
 footer {
 background: #000000;
@@ -356,7 +389,8 @@ color: #777;
 font-size: 14px;
 }
 
-/* MOBILE */
+
+/* ================= TABLET ================= */
 
 @media (max-width: 900px) {
 
@@ -376,6 +410,9 @@ grid-template-columns: 1fr;
 font-size: 48px;
 }
 }
+
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 650px) {
 
@@ -422,39 +459,71 @@ grid-template-columns: 1fr;
 padding: 25px;
 }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- HEADER -->
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
 <div>
-<div class="logo">ACE</div>
-<div class="tagline">WEAR IT LIKE A CHAMP</div>
+
+<div class="logo">
+ACE
 </div>
 
+<div class="tagline">
+WEAR IT LIKE A CHAMP
+</div>
+
+</div>
+
+
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html" class="active">About</a>
-<a href="products.html">Products</a>
-<a href="gallery.html">Gallery</a>
-<a href="dealer.html">Dealer</a>
-<a href="contact.html">Contact</a>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html" class="active">
+About
+</a>
+
+<a href="products.html">
+Products
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="dealer.html">
+Dealer
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
 </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<h1>ABOUT <span>ACE</span></h1>
+<h1>
+ABOUT <span>ACE</span>
+</h1>
 
 <div class="hero-line"></div>
 
@@ -469,17 +538,22 @@ training harder and performing stronger.
 </section>
 
 
-<!-- OUR STORY -->
+<!-- ================= OUR STORY ================= -->
 
 <section class="section story">
 
 <div class="section-title">
 
-<h2>Our <span>Story</span></h2>
+<h2>
+Our <span>Story</span>
+</h2>
 
-<p>Built with passion. Driven by performance.</p>
+<p>
+Built with passion. Driven by performance.
+</p>
 
 </div>
+
 
 <div class="content story-box">
 
@@ -515,15 +589,18 @@ to perform.
 </section>
 
 
-<!-- MISSION -->
+<!-- ================= MISSION ================= -->
 
 <section class="section mission">
 
 <div class="section-title">
 
-<h2>Our <span>Mission</span></h2>
+<h2>
+Our <span>Mission</span>
+</h2>
 
 </div>
+
 
 <div class="mission-text">
 
@@ -537,23 +614,37 @@ perform better and feel confident.
 </section>
 
 
-<!-- WHAT WE DO -->
+<!-- ================= WHAT WE DO ================= -->
 
 <section class="section">
 
 <div class="section-title">
 
-<h2>What We <span>Do</span></h2>
+<h2>
+What We <span>Do</span>
+</h2>
 
-<p>Equipment designed around real training needs.</p>
+<p>
+Equipment designed around real training needs.
+</p>
 
 </div>
 
+
+<div class="product-grid">
+
+
+<!-- BOXING EQUIPMENT -->
+
 <a href="boxing.html" class="product-card">
 
-<div class="icon">🥊</div>
+<div class="icon">
+🥊
+</div>
 
-<h3>Boxing Equipment</h3>
+<h3>
+Boxing Equipment
+</h3>
 
 <p>
 Boxing equipment designed for training,
@@ -563,11 +654,17 @@ practice and demanding sessions.
 </a>
 
 
+<!-- COMBAT SPORTS -->
+
 <div class="product-card">
 
-<div class="icon">🥋</div>
+<div class="icon">
+🥋
+</div>
 
-<h3>Combat Sports</h3>
+<h3>
+Combat Sports
+</h3>
 
 <p>
 Equipment for athletes involved in combat
@@ -577,11 +674,17 @@ sports and martial arts training.
 </div>
 
 
+<!-- FITNESS & TRAINING -->
+
 <div class="product-card">
 
-<div class="icon">🏋️</div>
+<div class="icon">
+🏋️
+</div>
 
-<h3>Fitness & Training</h3>
+<h3>
+Fitness & Training
+</h3>
 
 <p>
 Practical training equipment for gyms,
@@ -590,24 +693,30 @@ academies and fitness enthusiasts.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- QUALITY -->
+<!-- ================= QUALITY ================= -->
 
 <section class="section story">
 
 <div class="section-title">
 
-<h2>Quality <span>First</span></h2>
+<h2>
+Quality <span>First</span>
+</h2>
 
 </div>
 
+
 <div class="quality-box">
 
-<h3>Made With Attention To Detail</h3>
+<h3>
+Made With Attention To Detail
+</h3>
 
 <p>
 At ACE, quality is not just a final inspection —
@@ -637,23 +746,31 @@ Reliable performance.
 </section>
 
 
-<!-- VALUES -->
+<!-- ================= VALUES ================= -->
 
 <section class="section values">
 
 <div class="section-title">
 
-<h2>Why Choose <span>ACE?</span></h2>
+<h2>
+Why Choose <span>ACE?</span>
+</h2>
 
-<p>The values behind our brand.</p>
+<p>
+The values behind our brand.
+</p>
 
 </div>
 
+
 <div class="value-grid">
+
 
 <div class="value-box">
 
-<h3>QUALITY</h3>
+<h3>
+QUALITY
+</h3>
 
 <p>
 Carefully selected materials and attention
@@ -665,7 +782,9 @@ to manufacturing details.
 
 <div class="value-box">
 
-<h3>DURABILITY</h3>
+<h3>
+DURABILITY
+</h3>
 
 <p>
 Equipment designed to handle regular and
@@ -677,7 +796,9 @@ demanding training.
 
 <div class="value-box">
 
-<h3>PERFORMANCE</h3>
+<h3>
+PERFORMANCE
+</h3>
 
 <p>
 Practical designs focused on athletes and
@@ -689,7 +810,9 @@ real training requirements.
 
 <div class="value-box">
 
-<h3>RELIABILITY</h3>
+<h3>
+RELIABILITY
+</h3>
 
 <p>
 Consistent products and a commitment to
@@ -698,20 +821,24 @@ customer satisfaction.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- VISION -->
+<!-- ================= VISION ================= -->
 
 <section class="section">
 
 <div class="section-title">
 
-<h2>Our <span>Vision</span></h2>
+<h2>
+Our <span>Vision</span>
+</h2>
 
 </div>
+
 
 <div class="content">
 
@@ -738,15 +865,18 @@ improve and perform.
 </section>
 
 
-<!-- CUSTOMER COMMITMENT -->
+<!-- ================= CUSTOMER COMMITMENT ================= -->
 
 <section class="section story">
 
 <div class="section-title">
 
-<h2>Our <span>Commitment</span></h2>
+<h2>
+Our <span>Commitment</span>
+</h2>
 
 </div>
+
 
 <div class="content">
 
@@ -777,23 +907,31 @@ Wear It Like a Champ.
 </section>
 
 
-<!-- COMPANY / CONTACT INFORMATION -->
+<!-- ================= COMPANY INFORMATION ================= -->
 
 <section class="section contact">
 
 <div class="section-title">
 
-<h2>Company <span>Information</span></h2>
+<h2>
+Company <span>Information</span>
+</h2>
 
-<p>Connect with ACE for business and product enquiries.</p>
+<p>
+Connect with ACE for business and product enquiries.
+</p>
 
 </div>
 
+
 <div class="contact-grid">
+
 
 <div class="contact-box">
 
-<h3>Company</h3>
+<h3>
+Company
+</h3>
 
 <p>
 ACE – Wear It Like a Champ
@@ -808,7 +946,9 @@ Sports & Combat Sports Equipment
 
 <div class="contact-box">
 
-<h3>Business Enquiries</h3>
+<h3>
+Business Enquiries
+</h3>
 
 <p>
 For product enquiries, dealer enquiries,
@@ -821,7 +961,9 @@ please contact our team.
 
 <div class="contact-box">
 
-<h3>Location</h3>
+<h3>
+Location
+</h3>
 
 <p>
 India
@@ -833,16 +975,19 @@ Add your complete business address here.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- CONTACT CTA -->
+<!-- ================= CONTACT CTA ================= -->
 
 <section class="cta">
 
-<h2>Ready to Work With ACE?</h2>
+<h2>
+Ready to Work With ACE?
+</h2>
 
 <p>
 Get in touch with us for products, dealership,
@@ -856,7 +1001,7 @@ CONTACT US
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
