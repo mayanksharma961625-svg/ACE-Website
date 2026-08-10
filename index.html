@@ -9,7 +9,9 @@
 
 <style>
 
-/* ================= RESET ================= */
+/* =====================================================
+RESET
+===================================================== */
 
 * {
 margin: 0;
@@ -29,64 +31,105 @@ line-height: 1.6;
 }
 
 
-/* ================= HEADER ================= */
+/* =====================================================
+HEADER
+===================================================== */
 
 header {
+
 background: #050505;
-padding: 12px 7%;
+
+min-height: 100px;
+
+padding: 8px 6%;
 
 display: flex;
+
 justify-content: space-between;
+
 align-items: center;
 
 position: sticky;
+
 top: 0;
+
 z-index: 1000;
 
 border-bottom: 1px solid #292929;
 }
 
+
+/* LOGO AREA */
+
 .logo-area {
+
 display: flex;
+
 align-items: center;
-gap: 12px;
+
+gap: 15px;
 }
+
+
+/* BIG LOGO */
 
 .logo-img {
-width: 62px;
-height: 62px;
+
+width: 90px;
+
+height: 90px;
+
 object-fit: contain;
+
+display: block;
 }
 
+
 .brand-name {
+
 color: #e00000;
-font-size: 26px;
+
+font-size: 28px;
+
 font-weight: 900;
+
+letter-spacing: 3px;
+}
+
+
+.tagline {
+
+color: #999999;
+
+font-size: 9px;
+
 letter-spacing: 2px;
 }
 
-.tagline {
-color: #999;
-font-size: 9px;
-letter-spacing: 1.5px;
-}
 
-
-/* NAVIGATION */
+/* =====================================================
+NAVIGATION
+===================================================== */
 
 nav {
+
 display: flex;
+
 align-items: center;
+
 flex-wrap: wrap;
 }
 
 nav a {
+
 color: #ffffff;
+
 text-decoration: none;
 
 margin-left: 22px;
 
 font-size: 14px;
+
 font-weight: bold;
 
 transition: 0.3s;
@@ -94,60 +137,114 @@ transition: 0.3s;
 
 nav a:hover,
 nav a.active {
+
 color: #e00000;
 }
 
 
-/* ================= HERO ================= */
+/* =====================================================
+HERO
+===================================================== */
 
 .hero {
 
-min-height: calc(100vh - 87px);
-
-display: flex;
-align-items: center;
-
 position: relative;
+
+min-height: 760px;
 
 background-color: #050505;
 
-background-image:
-linear-gradient(
-rgba(0,0,0,0.30),
-rgba(0,0,0,0.65)
-),
-url("images/background/home-banner.jpg");
+display: flex;
+
+align-items: center;
+
+overflow: hidden;
+}
+
 
 /*
-COVER keeps the entire hero filled.
-The image stays centered.
+IMPORTANT:
+
+CONTAIN = image crop nahi hogi.
+
+Image apne original proportion mein
+center mein poori dikhegi.
 */
-background-size: cover;
-background-position: center center;
+
+.hero::before {
+
+content: "";
+
+position: absolute;
+
+inset: 0;
+
+background-image:
+url("images/background/home-banner.jpg");
+
 background-repeat: no-repeat;
+
+background-position: center center;
+
+background-size: contain;
+
+z-index: 0;
 }
+
+
+/* DARK OVERLAY */
+
+.hero::after {
+
+content: "";
+
+position: absolute;
+
+inset: 0;
+
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,0.78) 0%,
+rgba(0,0,0,0.48) 40%,
+rgba(0,0,0,0.12) 100%
+);
+
+z-index: 1;
+}
+
+
+/* HERO CONTENT */
 
 .hero-content {
 
+position: relative;
+
+z-index: 2;
+
 width: 100%;
+
 max-width: 1200px;
 
 margin: auto;
 
-padding: 90px 8%;
+padding: 100px 8%;
 }
+
 
 .hero-small {
 
 color: #e00000;
 
 font-size: 15px;
+
 font-weight: bold;
 
 letter-spacing: 4px;
 
 margin-bottom: 18px;
 }
+
 
 .hero h1 {
 
@@ -159,16 +256,20 @@ font-weight: 900;
 
 text-transform: uppercase;
 
-max-width: 850px;
+max-width: 720px;
 }
 
+
 .hero h1 span {
+
 color: #e00000;
 }
+
 
 .hero-line {
 
 width: 90px;
+
 height: 4px;
 
 background: #e00000;
@@ -176,9 +277,10 @@ background: #e00000;
 margin: 28px 0;
 }
 
+
 .hero p {
 
-max-width: 650px;
+max-width: 620px;
 
 color: #eeeeee;
 
@@ -188,7 +290,9 @@ margin-bottom: 28px;
 }
 
 
-/* ================= BUTTONS ================= */
+/* =====================================================
+BUTTONS
+===================================================== */
 
 .btn {
 
@@ -211,6 +315,7 @@ border-radius: 4px;
 transition: 0.3s;
 }
 
+
 .btn:hover {
 
 background: #ffffff;
@@ -218,12 +323,14 @@ background: #ffffff;
 color: #000000;
 }
 
+
 .btn-outline {
 
 background: transparent;
 
 border: 1px solid #ffffff;
 }
+
 
 .btn-outline:hover {
 
@@ -233,21 +340,25 @@ color: #000000;
 }
 
 
-/* ================= GENERAL SECTIONS ================= */
+/* =====================================================
+GENERAL SECTION
+===================================================== */
 
 .section {
 
 padding: 80px 8%;
 }
 
-.section-title {
 
-text-align: center;
+.section-title {
 
 max-width: 850px;
 
+text-align: center;
+
 margin: 0 auto 50px;
 }
+
 
 .section-title h2 {
 
@@ -258,25 +369,30 @@ text-transform: uppercase;
 margin-bottom: 12px;
 }
 
+
 .section-title h2 span {
 
 color: #e00000;
 }
 
+
 .section-title p {
 
-color: #999;
+color: #999999;
 
 font-size: 16px;
 }
 
 
-/* ================= CATEGORY SECTION ================= */
+/* =====================================================
+CATEGORIES
+===================================================== */
 
 .categories {
 
 background: #0d0d0d;
 }
+
 
 .category-grid {
 
@@ -290,6 +406,7 @@ grid-template-columns: repeat(3, 1fr);
 
 gap: 25px;
 }
+
 
 .category-card {
 
@@ -310,12 +427,14 @@ color: #ffffff;
 transition: 0.3s;
 }
 
+
 .category-card:hover {
 
 transform: translateY(-8px);
 
 border-color: #e00000;
 }
+
 
 .category-icon {
 
@@ -324,29 +443,34 @@ font-size: 55px;
 margin-bottom: 15px;
 }
 
+
 .category-card h3 {
 
 color: #e00000;
 
-font-size: 22px;
-
 margin-bottom: 10px;
+
+font-size: 22px;
 }
+
 
 .category-card p {
 
-color: #aaa;
+color: #aaaaaa;
 
 font-size: 15px;
 }
 
 
-/* ================= ABOUT ================= */
+/* =====================================================
+ABOUT
+===================================================== */
 
 .about {
 
 background: #111111;
 }
+
 
 .about-grid {
 
@@ -363,6 +487,7 @@ gap: 50px;
 align-items: center;
 }
 
+
 .about-text h2 {
 
 font-size: 42px;
@@ -370,10 +495,12 @@ font-size: 42px;
 margin-bottom: 20px;
 }
 
+
 .about-text h2 span {
 
 color: #e00000;
 }
+
 
 .about-text p {
 
@@ -384,14 +511,16 @@ font-size: 17px;
 margin-bottom: 18px;
 }
 
-.about-image {
 
-overflow: hidden;
+.about-image {
 
 border-radius: 10px;
 
+overflow: hidden;
+
 border: 1px solid #292929;
 }
+
 
 .about-image img {
 
@@ -402,22 +531,18 @@ height: 420px;
 object-fit: cover;
 
 display: block;
-
-transition: 0.4s;
-}
-
-.about-image:hover img {
-
-transform: scale(1.04);
 }
 
 
-/* ================= FEATURED ================= */
+/* =====================================================
+FEATURED IMAGE
+===================================================== */
 
 .featured {
 
 background: #080808;
 }
+
 
 .featured-box {
 
@@ -425,33 +550,35 @@ max-width: 1150px;
 
 margin: auto;
 
-overflow: hidden;
-
 border-radius: 10px;
+
+overflow: hidden;
 
 border: 1px solid #292929;
 }
+
 
 .featured-box img {
 
 width: 100%;
 
-height: 520px;
-
-object-fit: cover;
-
-object-position: center;
+height: auto;
 
 display: block;
+
+object-fit: contain;
 }
 
 
-/* ================= WHY ACE ================= */
+/* =====================================================
+VALUES
+===================================================== */
 
 .values {
 
 background: #111111;
 }
+
 
 .value-grid {
 
@@ -466,6 +593,7 @@ grid-template-columns: repeat(4, 1fr);
 gap: 20px;
 }
 
+
 .value-box {
 
 background: #080808;
@@ -479,6 +607,7 @@ border-bottom: 3px solid #e00000;
 border-radius: 6px;
 }
 
+
 .value-box h3 {
 
 color: #e00000;
@@ -486,15 +615,18 @@ color: #e00000;
 margin-bottom: 10px;
 }
 
+
 .value-box p {
 
-color: #999;
+color: #999999;
 
 font-size: 14px;
 }
 
 
-/* ================= CTA ================= */
+/* =====================================================
+CTA
+===================================================== */
 
 .cta {
 
@@ -510,12 +642,14 @@ linear-gradient(
 );
 }
 
+
 .cta h2 {
 
 font-size: 42px;
 
 margin-bottom: 15px;
 }
+
 
 .cta p {
 
@@ -527,7 +661,9 @@ margin: 0 auto 25px;
 }
 
 
-/* ================= FOOTER ================= */
+/* =====================================================
+FOOTER
+===================================================== */
 
 footer {
 
@@ -540,16 +676,16 @@ text-align: center;
 border-top: 1px solid #222222;
 }
 
+
 .footer-logo img {
 
-width: 80px;
+width: 90px;
 
-height: 80px;
+height: 90px;
 
 object-fit: contain;
-
-margin-bottom: 10px;
 }
+
 
 .footer-tagline {
 
@@ -559,13 +695,15 @@ font-size: 11px;
 
 letter-spacing: 2px;
 
-margin-bottom: 20px;
+margin: 10px 0 20px;
 }
+
 
 .footer-links {
 
 margin-bottom: 20px;
 }
+
 
 .footer-links a {
 
@@ -578,10 +716,12 @@ margin: 0 10px;
 font-size: 14px;
 }
 
+
 .footer-links a:hover {
 
 color: #e00000;
 }
+
 
 footer p {
 
@@ -591,34 +731,57 @@ font-size: 13px;
 }
 
 
-/* ================= TABLET ================= */
+/* =====================================================
+TABLET
+===================================================== */
 
 @media (max-width: 900px) {
 
 header {
 
-padding: 12px 5%;
+min-height: 95px;
+
+padding: 6px 4%;
 }
+
+
+.logo-img {
+
+width: 78px;
+
+height: 78px;
+}
+
 
 nav a {
 
 margin-left: 12px;
 }
 
+
+.hero {
+
+min-height: 680px;
+}
+
+
 .hero h1 {
 
 font-size: 55px;
 }
+
 
 .category-grid {
 
 grid-template-columns: 1fr 1fr;
 }
 
+
 .value-grid {
 
 grid-template-columns: 1fr 1fr;
 }
+
 
 .about-grid {
 
@@ -628,7 +791,9 @@ grid-template-columns: 1fr;
 }
 
 
-/* ================= MOBILE ================= */
+/* =====================================================
+MOBILE
+===================================================== */
 
 @media (max-width: 650px) {
 
@@ -636,10 +801,31 @@ header {
 
 flex-direction: column;
 
-gap: 12px;
+gap: 8px;
 
-padding: 12px 5%;
+padding: 8px 4%;
 }
+
+
+.logo-area {
+
+gap: 10px;
+}
+
+
+.logo-img {
+
+width: 82px;
+
+height: 82px;
+}
+
+
+.brand-name {
+
+font-size: 24px;
+}
+
 
 nav {
 
@@ -647,6 +833,7 @@ justify-content: center;
 
 text-align: center;
 }
+
 
 nav a {
 
@@ -657,17 +844,30 @@ margin: 4px 6px;
 font-size: 13px;
 }
 
+
 .hero {
 
-min-height: 650px;
+min-height: 680px;
+}
+
+
+/*
+Mobile par bhi image crop nahi hogi.
+*/
+
+.hero::before {
+
+background-size: contain;
 
 background-position: center center;
 }
 
+
 .hero-content {
 
-padding: 70px 7%;
+padding: 80px 7%;
 }
+
 
 .hero-small {
 
@@ -676,45 +876,48 @@ font-size: 12px;
 letter-spacing: 2px;
 }
 
+
 .hero h1 {
 
-font-size: 42px;
+font-size: 40px;
 }
+
 
 .hero p {
 
 font-size: 16px;
 }
 
+
 .section {
 
 padding: 60px 6%;
 }
+
 
 .section-title h2 {
 
 font-size: 30px;
 }
 
+
 .category-grid {
 
 grid-template-columns: 1fr;
 }
+
 
 .value-grid {
 
 grid-template-columns: 1fr;
 }
 
+
 .about-image img {
 
 height: 300px;
 }
 
-.featured-box img {
-
-height: 350px;
-}
 
 .cta h2 {
 
@@ -724,14 +927,17 @@ font-size: 31px;
 }
 
 
-/* ================= SMALL MOBILE ================= */
+/* =====================================================
+SMALL MOBILE
+===================================================== */
 
 @media (max-width: 400px) {
 
 .hero h1 {
 
-font-size: 36px;
+font-size: 35px;
 }
+
 
 .btn {
 
@@ -752,9 +958,9 @@ margin-right: 0;
 <body>
 
 
-<!-- ==================================================
+<!-- =====================================================
 HEADER
-================================================== -->
+===================================================== -->
 
 <header>
 
@@ -812,9 +1018,9 @@ Contact
 </header>
 
 
-<!-- ==================================================
+<!-- =====================================================
 HERO
-================================================== -->
+===================================================== -->
 
 <section class="hero">
 
@@ -824,17 +1030,27 @@ HERO
 ACE SPORTS EQUIPMENT
 </div>
 
+
 <h1>
+
 WEAR IT LIKE
-<span>A CHAMP</span>
+
+<span>
+A CHAMP
+</span>
+
 </h1>
+
 
 <div class="hero-line"></div>
 
+
 <p>
+
 Strong equipment for serious training.
 Built for athletes, gyms, academies
 and champions who never stop improving.
+
 </p>
 
 
@@ -858,9 +1074,9 @@ CONTACT US
 </section>
 
 
-<!-- ==================================================
-PRODUCT CATEGORIES
-================================================== -->
+<!-- =====================================================
+CATEGORIES
+===================================================== -->
 
 <section class="section categories">
 
@@ -880,8 +1096,6 @@ performance and the fighting spirit.
 
 <div class="category-grid">
 
-
-<!-- BOXING -->
 
 <a
 href="boxing.html"
@@ -904,8 +1118,6 @@ boxing essentials for serious athletes.
 </a>
 
 
-<!-- COMBAT -->
-
 <a
 href="combat.html"
 class="category-card"
@@ -926,8 +1138,6 @@ combat training and fight preparation.
 
 </a>
 
-
-<!-- FITNESS -->
 
 <a
 href="fitness.html"
@@ -955,9 +1165,9 @@ academies and everyday training.
 </section>
 
 
-<!-- ==================================================
-ABOUT PREVIEW
-================================================== -->
+<!-- =====================================================
+ABOUT
+===================================================== -->
 
 <section class="section about">
 
@@ -971,12 +1181,14 @@ Built For
 <span>Performance</span>
 </h2>
 
+
 <p>
 ACE – Wear It Like a Champ is a sports
 equipment brand built around one simple belief:
 when you train with the right equipment,
 you train with confidence.
 </p>
+
 
 <p>
 Strong materials, practical designs,
@@ -1010,9 +1222,9 @@ alt="ACE Boxing Training"
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================================
 FEATURED IMAGE
-================================================== -->
+===================================================== -->
 
 <section class="section featured">
 
@@ -1042,9 +1254,9 @@ alt="ACE Boxing Gloves"
 </section>
 
 
-<!-- ==================================================
-WHY ACE
-================================================== -->
+<!-- =====================================================
+VALUES
+===================================================== -->
 
 <section class="section values">
 
@@ -1125,15 +1337,16 @@ to customer satisfaction.
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================================
 CONTACT CTA
-================================================== -->
+===================================================== -->
 
 <section class="cta">
 
 <h2>
 Ready to Train Like a Champ?
 </h2>
+
 
 <p>
 Explore ACE sports equipment or contact us
@@ -1159,11 +1372,12 @@ CONTACT US
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================================
 FOOTER
-================================================== -->
+===================================================== -->
 
 <footer>
+
 
 <div class="footer-logo">
 
@@ -1176,7 +1390,9 @@ alt="ACE Logo"
 
 
 <div class="footer-tagline">
+
 WEAR IT LIKE A CHAMP
+
 </div>
 
 
@@ -1210,9 +1426,12 @@ Contact
 
 
 <p>
+
 © 2026 ACE – Wear It Like a Champ.
 All Rights Reserved.
+
 </p>
+
 
 </footer>
 
