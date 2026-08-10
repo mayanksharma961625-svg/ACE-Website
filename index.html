@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ACE - Wear It Like a Champ</title>
-
-<meta name="description" content="ACE - Premium boxing, MMA and combat sports equipment. Wear It Like a Champ.">
+<title>ACE | Wear It Like a Champ</title>
 
 <style>
+
 * {
 margin: 0;
 padding: 0;
@@ -21,778 +20,680 @@ scroll-behavior: smooth;
 
 body {
 font-family: Arial, Helvetica, sans-serif;
-background: #0b0b0b;
-color: #ffffff;
+background: #080808;
+color: #fff;
 line-height: 1.6;
 }
 
-a {
-color: inherit;
-text-decoration: none;
-}
-
-.container {
-width: min(1180px, 92%);
-margin: auto;
-}
-
-/* NAVBAR */
+/* ================= HEADER ================= */
 
 header {
+background: #050505;
+padding: 14px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
 position: sticky;
 top: 0;
 z-index: 1000;
-background: rgba(0, 0, 0, 0.94);
-border-bottom: 1px solid #252525;
+border-bottom: 1px solid #292929;
 }
 
-nav {
-min-height: 75px;
+.logo-area {
 display: flex;
 align-items: center;
-justify-content: space-between;
-gap: 30px;
+gap: 12px;
 }
 
-.logo {
-font-size: 30px;
+.logo-img {
+width: 62px;
+height: 62px;
+object-fit: contain;
+}
+
+.brand-name {
+color: #e00000;
+font-size: 26px;
 font-weight: 900;
-letter-spacing: 3px;
-color: #e50914;
+letter-spacing: 2px;
 }
 
-.logo span {
-color: #ffffff;
+.tagline {
+color: #999;
+font-size: 9px;
+letter-spacing: 1.5px;
 }
 
-.nav-links {
-display: flex;
-align-items: center;
-gap: 25px;
-list-style: none;
-}
-
-.nav-links a {
+nav a {
+color: #fff;
+text-decoration: none;
+margin-left: 20px;
 font-size: 14px;
-font-weight: 700;
-text-transform: uppercase;
-transition: 0.3s;
+font-weight: bold;
 }
 
-.nav-links a:hover {
-color: #e50914;
+nav a:hover,
+nav a.active {
+color: #e00000;
 }
 
-.menu-btn {
-display: none;
-border: 0;
-background: transparent;
-color: #ffffff;
-font-size: 28px;
-cursor: pointer;
-}
-
-/* HERO */
+/* ================= HERO ================= */
 
 .hero {
-min-height: 88vh;
+min-height: 680px;
 display: flex;
 align-items: center;
-position: relative;
-overflow: hidden;
-background:
-radial-gradient(circle at 80% 30%, rgba(229,9,20,0.25), transparent 35%),
-linear-gradient(120deg, #050505, #151515 55%, #050505);
-}
 
-.hero::after {
-content: "";
-position: absolute;
-inset: 0;
-background: linear-gradient(
-90deg,
-rgba(0,0,0,0.95),
+background-image:
+linear-gradient(
 rgba(0,0,0,0.45),
-rgba(0,0,0,0.85)
-);
-pointer-events: none;
+rgba(0,0,0,0.82)
+),
+url("images/background/home-banner.jpg");
+
+background-size: cover;
+background-position: center;
 }
 
 .hero-content {
-position: relative;
-z-index: 2;
-max-width: 720px;
-padding: 80px 0;
+width: 100%;
+max-width: 1200px;
+margin: auto;
+padding: 80px 8%;
 }
 
-.tag {
-display: inline-block;
-color: #e50914;
-border: 1px solid #e50914;
-padding: 8px 15px;
-font-size: 12px;
-font-weight: 800;
-letter-spacing: 2px;
-text-transform: uppercase;
-margin-bottom: 22px;
+.hero-small {
+color: #e00000;
+font-size: 15px;
+font-weight: bold;
+letter-spacing: 4px;
+margin-bottom: 15px;
 }
 
 .hero h1 {
-font-size: clamp(48px, 8vw, 88px);
-line-height: 0.95;
-text-transform: uppercase;
+font-size: 70px;
+line-height: 1.05;
 font-weight: 900;
-letter-spacing: -3px;
-margin-bottom: 25px;
+text-transform: uppercase;
+max-width: 850px;
 }
 
 .hero h1 span {
-color: #e50914;
+color: #e00000;
+}
+
+.hero-line {
+width: 90px;
+height: 4px;
+background: #e00000;
+margin: 25px 0;
 }
 
 .hero p {
-color: #cccccc;
-font-size: 18px;
-max-width: 620px;
-margin-bottom: 35px;
+max-width: 650px;
+color: #ddd;
+font-size: 19px;
+margin-bottom: 25px;
 }
 
-.buttons {
-display: flex;
-flex-wrap: wrap;
-gap: 15px;
-}
+/* ================= BUTTON ================= */
 
 .btn {
 display: inline-block;
-padding: 14px 24px;
-font-weight: 800;
-text-transform: uppercase;
-font-size: 13px;
-border: 2px solid #e50914;
+padding: 14px 30px;
+margin: 5px 8px 5px 0;
+background: #e00000;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
 transition: 0.3s;
 }
 
-.btn-primary {
-background: #e50914;
-color: #ffffff;
-}
-
-.btn-primary:hover {
-background: #b20710;
-border-color: #b20710;
+.btn:hover {
+background: #fff;
+color: #000;
 }
 
 .btn-outline {
 background: transparent;
-color: #ffffff;
+border: 1px solid #fff;
 }
 
-.btn-outline:hover {
-background: #ffffff;
-color: #000000;
-border-color: #ffffff;
+/* ================= SECTION ================= */
+
+.section {
+padding: 80px 8%;
 }
 
-/* STATS */
-
-.stats {
-background: #e50914;
-padding: 28px 0;
-}
-
-.stats-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 20px;
+.section-title {
 text-align: center;
+max-width: 850px;
+margin: 0 auto 50px;
 }
 
-.stat strong {
-display: block;
-font-size: 30px;
-font-weight: 900;
-}
-
-.stat span {
-font-size: 12px;
+.section-title h2 {
+font-size: 40px;
 text-transform: uppercase;
-font-weight: 700;
+margin-bottom: 10px;
 }
 
-/* COMMON */
-
-section {
-padding: 90px 0;
+.section-title h2 span {
+color: #e00000;
 }
 
-.section-heading {
-text-align: center;
-max-width: 720px;
-margin: 0 auto 55px;
+.section-title p {
+color: #999;
 }
 
-.section-heading .small-title {
-color: #e50914;
-font-size: 12px;
-font-weight: 900;
-letter-spacing: 3px;
-text-transform: uppercase;
-margin-bottom: 12px;
+/* ================= CATEGORIES ================= */
+
+.categories {
+background: #0d0d0d;
 }
 
-.section-heading h2 {
-font-size: clamp(34px, 5vw, 55px);
-line-height: 1;
-text-transform: uppercase;
-margin-bottom: 18px;
-}
+.category-grid {
+max-width: 1100px;
+margin: auto;
 
-.section-heading p {
-color: #999999;
-}
-
-/* ABOUT */
-
-.about {
-background: #101010;
-}
-
-.about-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 60px;
-align-items: center;
-}
-
-.about-box {
-min-height: 430px;
-background:
-linear-gradient(135deg, rgba(229,9,20,0.85), rgba(0,0,0,0.9)),
-#171717;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 40px;
-text-align: center;
-}
-
-.about-box h3 {
-font-size: 70px;
-font-weight: 900;
-line-height: 0.9;
-}
-
-.about-text h2 {
-font-size: 45px;
-text-transform: uppercase;
-margin-bottom: 20px;
-}
-
-.about-text p {
-color: #aaaaaa;
-margin-bottom: 18px;
-}
-
-.check-list {
-list-style: none;
-margin: 25px 0;
-}
-
-.check-list li {
-margin-bottom: 12px;
-font-weight: 700;
-}
-
-.check-list li::before {
-content: "✓";
-color: #e50914;
-margin-right: 10px;
-font-weight: 900;
-}
-
-/* PRODUCTS */
-
-.products {
-background: #080808;
-}
-
-.product-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-gap: 22px;
+gap: 25px;
 }
 
-.product-card {
+.category-card {
 background: #151515;
 border: 1px solid #292929;
-overflow: hidden;
+border-radius: 8px;
+padding: 40px 25px;
+text-align: center;
+
+color: #fff;
+text-decoration: none;
+
 transition: 0.3s;
 }
 
-.product-card:hover {
+.category-card:hover {
 transform: translateY(-8px);
-border-color: #e50914;
+border-color: #e00000;
 }
 
-.product-image {
-height: 230px;
-display: flex;
-align-items: center;
-justify-content: center;
-background:
-radial-gradient(circle, #2a2a2a, #101010);
-font-size: 24px;
-font-weight: 900;
-text-transform: uppercase;
-color: #e50914;
+.category-icon {
+font-size: 55px;
+margin-bottom: 15px;
 }
 
-.product-info {
-padding: 24px;
-}
-
-.product-info h3 {
-font-size: 22px;
-text-transform: uppercase;
+.category-card h3 {
+color: #e00000;
 margin-bottom: 10px;
+font-size: 22px;
 }
 
-.product-info p {
-color: #999999;
-font-size: 14px;
+.category-card p {
+color: #aaa;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+background: #111;
+}
+
+.about-grid {
+max-width: 1100px;
+margin: auto;
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+align-items: center;
+}
+
+.about-text h2 {
+font-size: 40px;
+margin-bottom: 20px;
+}
+
+.about-text h2 span {
+color: #e00000;
+}
+
+.about-text p {
+color: #ccc;
+font-size: 17px;
 margin-bottom: 18px;
 }
 
-.product-link {
-color: #e50914;
-font-weight: 800;
-font-size: 13px;
-text-transform: uppercase;
+.about-image {
+overflow: hidden;
+border-radius: 10px;
+border: 1px solid #292929;
 }
 
-/* WHY ACE */
-
-.why {
-background: #101010;
+.about-image img {
+width: 100%;
+height: 420px;
+object-fit: cover;
+display: block;
 }
 
-.feature-grid {
+/* ================= FEATURED IMAGE ================= */
+
+.featured {
+background: #080808;
+}
+
+.featured-box {
+max-width: 1100px;
+margin: auto;
+overflow: hidden;
+border-radius: 10px;
+border: 1px solid #292929;
+}
+
+.featured-box img {
+width: 100%;
+height: 520px;
+object-fit: cover;
+display: block;
+}
+
+/* ================= VALUES ================= */
+
+.values {
+background: #111;
+}
+
+.value-grid {
+max-width: 1150px;
+margin: auto;
+
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 gap: 20px;
 }
 
-.feature {
-padding: 30px 22px;
-background: #171717;
-border-top: 3px solid #e50914;
+.value-box {
+background: #080808;
+padding: 30px 20px;
+text-align: center;
+border-bottom: 3px solid #e00000;
+border-radius: 6px;
 }
 
-.feature-number {
-font-size: 35px;
-font-weight: 900;
-color: #e50914;
-margin-bottom: 12px;
-}
-
-.feature h3 {
-text-transform: uppercase;
+.value-box h3 {
+color: #e00000;
 margin-bottom: 10px;
-font-size: 18px;
 }
 
-.feature p {
-color: #999999;
+.value-box p {
+color: #999;
 font-size: 14px;
 }
 
-/* CTA */
+/* ================= CTA ================= */
 
 .cta {
-background:
-linear-gradient(90deg, rgba(229,9,20,0.92), rgba(120,0,0,0.88));
+padding: 90px 8%;
 text-align: center;
+background:
+linear-gradient(
+135deg,
+#350000,
+#090909
+);
 }
 
 .cta h2 {
-font-size: clamp(38px, 6vw, 65px);
-line-height: 1;
-text-transform: uppercase;
-margin-bottom: 18px;
+font-size: 40px;
+margin-bottom: 15px;
 }
 
 .cta p {
-max-width: 650px;
-margin: 0 auto 30px;
+color: #ccc;
+margin-bottom: 20px;
 }
 
-.cta .btn {
-border-color: #ffffff;
-}
+/* ================= FOOTER ================= */
 
-/* CONTACT */
-
-.contact {
-background: #080808;
-}
-
-.contact-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 22px;
-}
-
-.contact-card {
-background: #151515;
-padding: 30px;
+footer {
+background: #000;
+padding: 45px 8%;
 text-align: center;
-border: 1px solid #292929;
+border-top: 1px solid #222;
 }
 
-.contact-card h3 {
-color: #e50914;
-text-transform: uppercase;
+.footer-logo img {
+width: 80px;
+height: 80px;
+object-fit: contain;
 margin-bottom: 10px;
 }
 
-.contact-card p {
-color: #bbbbbb;
-}
-
-/* FOOTER */
-
-footer {
-background: #000000;
-border-top: 1px solid #222222;
-padding: 35px 0;
-}
-
-.footer-content {
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 20px;
-}
-
-.footer-logo {
-font-size: 24px;
-font-weight: 900;
+.footer-tagline {
+color: #999;
+font-size: 11px;
 letter-spacing: 2px;
-color: #e50914;
+margin-bottom: 20px;
 }
 
-.footer-content p {
-color: #777777;
+.footer-links {
+margin-bottom: 20px;
+}
+
+.footer-links a {
+color: #aaa;
+text-decoration: none;
+margin: 0 10px;
+font-size: 14px;
+}
+
+.footer-links a:hover {
+color: #e00000;
+}
+
+footer p {
+color: #666;
 font-size: 13px;
 }
 
-/* MOBILE */
+/* ================= TABLET ================= */
 
 @media (max-width: 900px) {
-.nav-links {
-position: absolute;
-top: 75px;
-left: 0;
-right: 0;
-background: #050505;
-display: none;
-flex-direction: column;
-align-items: flex-start;
-padding: 25px;
+
+.hero h1 {
+font-size: 52px;
 }
 
-.nav-links.active {
-display: flex;
+.category-grid {
+grid-template-columns: 1fr 1fr;
 }
 
-.menu-btn {
-display: block;
+.value-grid {
+grid-template-columns: 1fr 1fr;
 }
 
 .about-grid {
 grid-template-columns: 1fr;
 }
-
-.product-grid {
-grid-template-columns: repeat(2, 1fr);
 }
 
-.feature-grid {
-grid-template-columns: repeat(2, 1fr);
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+header {
+flex-direction: column;
+gap: 12px;
 }
 
-.stats-grid {
-grid-template-columns: repeat(2, 1fr);
+nav {
+text-align: center;
 }
 
-.contact-grid {
-grid-template-columns: 1fr;
-}
+nav a {
+display: inline-block;
+margin: 5px 7px;
 }
 
-@media (max-width: 600px) {
 .hero {
-min-height: 80vh;
+min-height: 600px;
+background-position: center;
+}
+
+.hero-content {
+padding: 70px 7%;
 }
 
 .hero h1 {
-letter-spacing: -2px;
+font-size: 40px;
 }
 
 .hero p {
 font-size: 16px;
 }
 
-.product-grid,
-.feature-grid {
+.section {
+padding: 60px 6%;
+}
+
+.section-title h2 {
+font-size: 30px;
+}
+
+.category-grid,
+.value-grid {
 grid-template-columns: 1fr;
 }
 
-.stats-grid {
-grid-template-columns: 1fr 1fr;
+.about-image img {
+height: 300px;
 }
 
-section {
-padding: 65px 0;
+.featured-box img {
+height: 350px;
 }
 
-.footer-content {
-flex-direction: column;
-text-align: center;
+.cta h2 {
+font-size: 30px;
 }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
+
 <header>
-<div class="container">
-<nav>
-<a href="index.html" class="logo">ACE<span>.</span></a>
 
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div class="logo-area">
 
-<ul class="nav-links" id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="catalog.html">Products</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="dealer.html">Dealer</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
+<img
+src="images/logo/ace-logo.png"
+alt="ACE Logo"
+class="logo-img"
+>
+
+<div>
+
+<div class="brand-name">
+ACE
 </div>
+
+<div class="tagline">
+WEAR IT LIKE A CHAMP
+</div>
+
+</div>
+
+</div>
+
+<nav>
+
+<a href="index.html" class="active">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="products.html">
+Products
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="dealer.html">
+Dealer
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
+
 </header>
 
-<!-- HERO -->
-<main>
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
-<div class="container">
+
 <div class="hero-content">
 
-<div class="tag">Professional Combat Equipment</div>
+<div class="hero-small">
+ACE SPORTS EQUIPMENT
+</div>
 
 <h1>
-Wear It<br>
-Like A <span>Champ.</span>
+WEAR IT LIKE
+<span>A CHAMP</span>
 </h1>
 
+<div class="hero-line"></div>
+
 <p>
-Built for fighters. Designed for champions.
-Discover premium boxing, MMA and combat sports equipment
-from ACE.
+Strong equipment for serious training.
+Built for athletes, gyms, academies
+and champions who never stop improving.
 </p>
 
-<div class="buttons">
-<a href="catalog.html" class="btn btn-primary">
-Explore Products
+<a href="products.html" class="btn">
+EXPLORE PRODUCTS
 </a>
 
-<a href="quote.html" class="btn btn-outline">
-Request a Quote
+<a href="contact.html" class="btn btn-outline">
+CONTACT ACE
 </a>
-</div>
 
 </div>
-</div>
+
 </section>
 
-<!-- STATS -->
-<section class="stats">
-<div class="container">
-<div class="stats-grid">
 
-<div class="stat">
-<strong>ACE</strong>
-<span>Built to Fight</span>
-</div>
+<!-- ================= CATEGORIES ================= -->
 
-<div class="stat">
-<strong>PRO</strong>
-<span>Performance Gear</span>
-</div>
+<section class="section categories">
 
-<div class="stat">
-<strong>100%</strong>
-<span>Fighter Focused</span>
-</div>
+<div class="section-title">
 
-<div class="stat">
-<strong>24/7</strong>
-<span>Champ Mindset</span>
-</div>
+<h2>
+Explore <span>Our Range</span>
+</h2>
+
+<p>
+Equipment made for training, performance
+and the fighting spirit.
+</p>
 
 </div>
+
+<div class="category-grid">
+
+<a href="boxing.html" class="category-card">
+
+<div class="category-icon">
+🥊
 </div>
+
+<h3>
+Boxing Equipment
+</h3>
+
+<p>
+Gloves, training equipment and boxing
+essentials for serious athletes.
+</p>
+
+</a>
+
+
+<a href="combat.html" class="category-card">
+
+<div class="category-icon">
+🥋
+</div>
+
+<h3>
+Combat Sports
+</h3>
+
+<p>
+Equipment for martial arts, combat
+training and fight preparation.
+</p>
+
+</a>
+
+
+<a href="fitness.html" class="category-card">
+
+<div class="category-icon">
+🏋️
+</div>
+
+<h3>
+Fitness & Training
+</h3>
+
+<p>
+Practical equipment for gyms,
+academies and everyday training.
+</p>
+
+</a>
+
+</div>
+
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-<div class="container">
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section about">
 
 <div class="about-grid">
 
-<div class="about-box">
-<div>
-<h3>ACE</h3>
-<p>WEAR IT LIKE A CHAMP</p>
-</div>
-</div>
-
 <div class="about-text">
 
-<div class="section-heading" style="text-align:left;margin:0 0 25px;">
-<div class="small-title">About ACE</div>
-<h2>Made For The Fight</h2>
-</div>
+<h2>
+Built For
+<span>Performance</span>
+</h2>
 
 <p>
-ACE creates combat sports equipment for athletes,
-fighters, coaches and training enthusiasts who demand
-confidence and performance from their gear.
+ACE – Wear It Like a Champ is a sports
+equipment brand built around one simple belief:
+when you train with the right equipment,
+you train with confidence.
 </p>
 
 <p>
-From boxing gloves to protective equipment and training
-essentials, our focus is simple: dependable equipment
-that helps you train harder and perform better.
+Strong materials, practical designs,
+dependable construction and equipment
+made for real training.
 </p>
 
-<ul class="check-list">
-<li>Boxing & MMA Equipment</li>
-<li>Training & Protective Gear</li>
-<li>Professional Quality</li>
-<li>Designed For Fighters</li>
-</ul>
-
-<a href="about.html" class="btn btn-primary">
-Discover ACE
+<a href="about.html" class="btn">
+OUR STORY
 </a>
 
 </div>
 
-</div>
 
-</div>
-</section>
+<div class="about-image">
 
-<!-- PRODUCTS -->
-<section class="products" id="products">
-
-<div class="container">
-
-<div class="section-heading">
-<div class="small-title">Our Collection</div>
-<h2>Fight. Train. Win.</h2>
-<p>
-Explore ACE equipment built for training,
-competition and everyday performance.
-</p>
-</div>
-
-<div class="product-grid">
-
-<article class="product-card">
-<div class="product-image">Boxing Gloves</div>
-<div class="product-info">
-<h3>Boxing Gloves</h3>
-<p>
-Reliable gloves for training, sparring and competition.
-</p>
-<a href="catalog.html" class="product-link">
-View Collection →
-</a>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image">MMA Gloves</div>
-<div class="product-info">
-<h3>MMA Gloves</h3>
-<p>
-Designed for striking, grappling and high-intensity sessions.
-</p>
-<a href="catalog.html" class="product-link">
-View Collection →
-</a>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image">Focus Pads</div>
-<div class="product-info">
-<h3>Focus Pads</h3>
-<p>
-Training essentials for coaches and fighters.
-</p>
-<a href="catalog.html" class="product-link">
-View Collection →
-</a>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image">Head Guards</div>
-<div class="product-info">
-<h3>Head Guards</h3>
-<p>
-Protective equipment made for demanding training.
-</p>
-<a href="catalog.html" class="product-link">
-View Collection →
-</a>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image">Punching Bags</div>
-<div class="product-info">
-<h3>Punching Bags</h3>
-<p>
-Train your power, timing and endurance.
-</p>
-<a href="catalog.html" class="product-link">
-View Collection →
-</a>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image">Protection</div>
-<div class="product-info">
-<h3>Protective Gear</h3>
-<p>
-Essential protection for serious combat sports training.
-</p>
-<a href="catalog.html" class="product-link">
-View Collection →
-</a>
-</div>
-</article>
+<img
+src="images/gallery/boxing-event.jpg"
+alt="ACE Boxing Training"
+>
 
 </div>
 
@@ -800,53 +701,107 @@ View Collection →
 
 </section>
 
-<!-- WHY ACE -->
-<section class="why">
 
-<div class="container">
+<!-- ================= FEATURED ================= -->
 
-<div class="section-heading">
-<div class="small-title">Why ACE</div>
-<h2>Built Different</h2>
+<section class="section featured">
+
+<div class="section-title">
+
+<h2>
+Train Like a <span>Champion</span>
+</h2>
+
 <p>
-Every fighter has a reason to step into the ring.
-ACE is built to help you go further.
+Equipment that becomes part of every training session.
 </p>
+
 </div>
 
-<div class="feature-grid">
 
-<div class="feature">
-<div class="feature-number">01</div>
-<h3>Performance</h3>
-<p>
-Equipment designed around the demands of real training.
-</p>
+<div class="featured-box">
+
+<img
+src="images/background/home-banner.jpg"
+alt="ACE Boxing Training"
+>
+
 </div>
 
-<div class="feature">
-<div class="feature-number">02</div>
-<h3>Protection</h3>
+</section>
+
+
+<!-- ================= VALUES ================= -->
+
+<section class="section values">
+
+<div class="section-title">
+
+<h2>
+Why Choose <span>ACE?</span>
+</h2>
+
 <p>
-Protective gear that helps you train with confidence.
+The values behind the ACE brand.
 </p>
+
 </div>
 
-<div class="feature">
-<div class="feature-number">03</div>
-<h3>Durability</h3>
+
+<div class="value-grid">
+
+<div class="value-box">
+
+<h3>
+QUALITY
+</h3>
+
 <p>
-Built for repeated sessions and serious athletes.
+Carefully selected materials and
+attention to manufacturing details.
 </p>
+
 </div>
 
-<div class="feature">
-<div class="feature-number">04</div>
-<h3>Champion Mindset</h3>
+
+<div class="value-box">
+
+<h3>
+DURABILITY
+</h3>
+
 <p>
-Because winning starts with how you prepare.
+Equipment designed for regular
+and demanding training.
 </p>
+
 </div>
+
+
+<div class="value-box">
+
+<h3>
+PERFORMANCE
+</h3>
+
+<p>
+Practical designs focused on
+real training requirements.
+</p>
+
+</div>
+
+
+<div class="value-box">
+
+<h3>
+RELIABILITY
+</h3>
+
+<p>
+Consistent products and a commitment
+to customer satisfaction.
+</p>
 
 </div>
 
@@ -854,122 +809,65 @@ Because winning starts with how you prepare.
 
 </section>
 
-<!-- DEALER CTA -->
+
+<!-- ================= CTA ================= -->
+
 <section class="cta">
 
-<div class="container">
-
-<h2>Become An ACE Dealer</h2>
+<h2>
+Ready to Train Like a Champ?
+</h2>
 
 <p>
-Bring ACE combat sports equipment to your customers.
-Contact our team to discuss dealership and business opportunities.
+Explore ACE sports equipment or contact us
+for product, dealer and bulk order enquiries.
 </p>
 
-<div class="buttons" style="justify-content:center;">
+<a href="products.html" class="btn">
+VIEW PRODUCTS
+</a>
 
 <a href="dealer.html" class="btn btn-outline">
-Become a Dealer
+BECOME A DEALER
 </a>
-
-<a href="quote.html" class="btn btn-outline">
-Request a Quote
-</a>
-
-</div>
-
-</div>
 
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
 
-<div class="container">
+<!-- ================= FOOTER ================= -->
 
-<div class="section-heading">
-<div class="small-title">Get In Touch</div>
-<h2>Let's Talk</h2>
-<p>
-Have a question about products, dealership or bulk orders?
-Our team is ready to help.
-</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-<h3>Products</h3>
-<p>Explore our complete product catalog.</p>
-<br>
-<a href="catalog.html" class="product-link">
-View Catalog →
-</a>
-</div>
-
-<div class="contact-card">
-<h3>Dealer</h3>
-<p>Interested in becoming an ACE dealer?</p>
-<br>
-<a href="dealer.html" class="product-link">
-Become a Dealer →
-</a>
-</div>
-
-<div class="contact-card">
-<h3>Contact</h3>
-<p>Have a question? Talk to the ACE team.</p>
-<br>
-<a href="contact.html" class="product-link">
-Contact Us →
-</a>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-<!-- FOOTER -->
 <footer>
 
-<div class="container">
-
-<div class="footer-content">
-
 <div class="footer-logo">
-ACE.
+
+<img
+src="images/logo/ace-logo.png"
+alt="ACE Logo"
+>
+
+</div>
+
+<div class="footer-tagline">
+WEAR IT LIKE A CHAMP
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="products.html">Products</a>
+<a href="gallery.html">Gallery</a>
+<a href="dealer.html">Dealer</a>
+<a href="contact.html">Contact</a>
+
 </div>
 
 <p>
-© 2026 ACE - Wear It Like a Champ. All Rights Reserved.
+© 2026 ACE – Wear It Like a Champ.
+All Rights Reserved.
 </p>
 
-<a href="quote.html" class="product-link">
-Request a Quote →
-</a>
-
-</div>
-
-</div>
-
 </footer>
-
-<script>
-function toggleMenu() {
-const nav = document.getElementById("navLinks");
-nav.classList.toggle("active");
-}
-
-document.querySelectorAll(".nav-links a").forEach(function(link) {
-link.addEventListener("click", function() {
-document.getElementById("navLinks").classList.remove("active");
-});
-});
-</script>
 
 </body>
 </html>
