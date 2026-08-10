@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ACE | Wear It Like a Champ</title>
 
 <style>
+
+/* ================= RESET ================= */
 
 * {
 margin: 0;
@@ -21,21 +24,25 @@ scroll-behavior: smooth;
 body {
 font-family: Arial, Helvetica, sans-serif;
 background: #080808;
-color: #fff;
+color: #ffffff;
 line-height: 1.6;
 }
+
 
 /* ================= HEADER ================= */
 
 header {
 background: #050505;
-padding: 14px 7%;
+padding: 12px 7%;
+
 display: flex;
 justify-content: space-between;
 align-items: center;
+
 position: sticky;
 top: 0;
 z-index: 1000;
+
 border-bottom: 1px solid #292929;
 }
 
@@ -64,12 +71,25 @@ font-size: 9px;
 letter-spacing: 1.5px;
 }
 
+
+/* NAVIGATION */
+
+nav {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+}
+
 nav a {
-color: #fff;
+color: #ffffff;
 text-decoration: none;
-margin-left: 20px;
+
+margin-left: 22px;
+
 font-size: 14px;
 font-weight: bold;
+
+transition: 0.3s;
 }
 
 nav a:hover,
@@ -77,44 +97,68 @@ nav a.active {
 color: #e00000;
 }
 
+
 /* ================= HERO ================= */
 
 .hero {
-min-height: 680px;
+
+min-height: calc(100vh - 87px);
+
 display: flex;
 align-items: center;
 
+position: relative;
+
+background-color: #050505;
+
 background-image:
 linear-gradient(
-rgba(0,0,0,0.45),
-rgba(0,0,0,0.82)
+rgba(0,0,0,0.30),
+rgba(0,0,0,0.65)
 ),
 url("images/background/home-banner.jpg");
 
+/*
+COVER keeps the entire hero filled.
+The image stays centered.
+*/
 background-size: cover;
-background-position: center;
+background-position: center center;
+background-repeat: no-repeat;
 }
 
 .hero-content {
+
 width: 100%;
 max-width: 1200px;
+
 margin: auto;
-padding: 80px 8%;
+
+padding: 90px 8%;
 }
 
 .hero-small {
+
 color: #e00000;
+
 font-size: 15px;
 font-weight: bold;
+
 letter-spacing: 4px;
-margin-bottom: 15px;
+
+margin-bottom: 18px;
 }
 
 .hero h1 {
-font-size: 70px;
-line-height: 1.05;
+
+font-size: 72px;
+
+line-height: 1.02;
+
 font-weight: 900;
+
 text-transform: uppercase;
+
 max-width: 850px;
 }
 
@@ -123,220 +167,341 @@ color: #e00000;
 }
 
 .hero-line {
+
 width: 90px;
 height: 4px;
+
 background: #e00000;
-margin: 25px 0;
+
+margin: 28px 0;
 }
 
 .hero p {
+
 max-width: 650px;
-color: #ddd;
+
+color: #eeeeee;
+
 font-size: 19px;
-margin-bottom: 25px;
+
+margin-bottom: 28px;
 }
 
-/* ================= BUTTON ================= */
+
+/* ================= BUTTONS ================= */
 
 .btn {
+
 display: inline-block;
+
 padding: 14px 30px;
+
 margin: 5px 8px 5px 0;
+
 background: #e00000;
-color: #fff;
+
+color: #ffffff;
+
 text-decoration: none;
+
 font-weight: bold;
+
 border-radius: 4px;
+
 transition: 0.3s;
 }
 
 .btn:hover {
-background: #fff;
-color: #000;
+
+background: #ffffff;
+
+color: #000000;
 }
 
 .btn-outline {
+
 background: transparent;
-border: 1px solid #fff;
+
+border: 1px solid #ffffff;
 }
 
-/* ================= SECTION ================= */
+.btn-outline:hover {
+
+background: #ffffff;
+
+color: #000000;
+}
+
+
+/* ================= GENERAL SECTIONS ================= */
 
 .section {
+
 padding: 80px 8%;
 }
 
 .section-title {
+
 text-align: center;
+
 max-width: 850px;
+
 margin: 0 auto 50px;
 }
 
 .section-title h2 {
+
 font-size: 40px;
+
 text-transform: uppercase;
-margin-bottom: 10px;
+
+margin-bottom: 12px;
 }
 
 .section-title h2 span {
+
 color: #e00000;
 }
 
 .section-title p {
+
 color: #999;
+
+font-size: 16px;
 }
 
-/* ================= CATEGORIES ================= */
+
+/* ================= CATEGORY SECTION ================= */
 
 .categories {
+
 background: #0d0d0d;
 }
 
 .category-grid {
-max-width: 1100px;
+
+max-width: 1150px;
+
 margin: auto;
 
 display: grid;
+
 grid-template-columns: repeat(3, 1fr);
+
 gap: 25px;
 }
 
 .category-card {
+
 background: #151515;
+
 border: 1px solid #292929;
+
 border-radius: 8px;
+
 padding: 40px 25px;
+
 text-align: center;
 
-color: #fff;
 text-decoration: none;
+
+color: #ffffff;
 
 transition: 0.3s;
 }
 
 .category-card:hover {
+
 transform: translateY(-8px);
+
 border-color: #e00000;
 }
 
 .category-icon {
+
 font-size: 55px;
+
 margin-bottom: 15px;
 }
 
 .category-card h3 {
+
 color: #e00000;
-margin-bottom: 10px;
+
 font-size: 22px;
+
+margin-bottom: 10px;
 }
 
 .category-card p {
+
 color: #aaa;
+
+font-size: 15px;
 }
+
 
 /* ================= ABOUT ================= */
 
 .about {
-background: #111;
+
+background: #111111;
 }
 
 .about-grid {
+
 max-width: 1100px;
+
 margin: auto;
 
 display: grid;
+
 grid-template-columns: 1fr 1fr;
+
 gap: 50px;
+
 align-items: center;
 }
 
 .about-text h2 {
-font-size: 40px;
+
+font-size: 42px;
+
 margin-bottom: 20px;
 }
 
 .about-text h2 span {
+
 color: #e00000;
 }
 
 .about-text p {
-color: #ccc;
+
+color: #cccccc;
+
 font-size: 17px;
+
 margin-bottom: 18px;
 }
 
 .about-image {
+
 overflow: hidden;
+
 border-radius: 10px;
+
 border: 1px solid #292929;
 }
 
 .about-image img {
+
 width: 100%;
+
 height: 420px;
+
 object-fit: cover;
+
 display: block;
+
+transition: 0.4s;
 }
 
-/* ================= FEATURED IMAGE ================= */
+.about-image:hover img {
+
+transform: scale(1.04);
+}
+
+
+/* ================= FEATURED ================= */
 
 .featured {
+
 background: #080808;
 }
 
 .featured-box {
-max-width: 1100px;
+
+max-width: 1150px;
+
 margin: auto;
+
 overflow: hidden;
+
 border-radius: 10px;
+
 border: 1px solid #292929;
 }
 
 .featured-box img {
+
 width: 100%;
+
 height: 520px;
+
 object-fit: cover;
+
+object-position: center;
+
 display: block;
 }
 
-/* ================= VALUES ================= */
+
+/* ================= WHY ACE ================= */
 
 .values {
-background: #111;
+
+background: #111111;
 }
 
 .value-grid {
+
 max-width: 1150px;
+
 margin: auto;
 
 display: grid;
+
 grid-template-columns: repeat(4, 1fr);
+
 gap: 20px;
 }
 
 .value-box {
+
 background: #080808;
+
 padding: 30px 20px;
+
 text-align: center;
+
 border-bottom: 3px solid #e00000;
+
 border-radius: 6px;
 }
 
 .value-box h3 {
+
 color: #e00000;
+
 margin-bottom: 10px;
 }
 
 .value-box p {
+
 color: #999;
+
 font-size: 14px;
 }
+
 
 /* ================= CTA ================= */
 
 .cta {
+
 padding: 90px 8%;
+
 text-align: center;
+
 background:
 linear-gradient(
 135deg,
@@ -346,146 +511,250 @@ linear-gradient(
 }
 
 .cta h2 {
-font-size: 40px;
+
+font-size: 42px;
+
 margin-bottom: 15px;
 }
 
 .cta p {
-color: #ccc;
-margin-bottom: 20px;
+
+color: #cccccc;
+
+max-width: 700px;
+
+margin: 0 auto 25px;
 }
+
 
 /* ================= FOOTER ================= */
 
 footer {
-background: #000;
+
+background: #000000;
+
 padding: 45px 8%;
+
 text-align: center;
-border-top: 1px solid #222;
+
+border-top: 1px solid #222222;
 }
 
 .footer-logo img {
+
 width: 80px;
+
 height: 80px;
+
 object-fit: contain;
+
 margin-bottom: 10px;
 }
 
 .footer-tagline {
-color: #999;
+
+color: #999999;
+
 font-size: 11px;
+
 letter-spacing: 2px;
+
 margin-bottom: 20px;
 }
 
 .footer-links {
+
 margin-bottom: 20px;
 }
 
 .footer-links a {
-color: #aaa;
+
+color: #aaaaaa;
+
 text-decoration: none;
+
 margin: 0 10px;
+
 font-size: 14px;
 }
 
 .footer-links a:hover {
+
 color: #e00000;
 }
 
 footer p {
-color: #666;
+
+color: #666666;
+
 font-size: 13px;
 }
+
 
 /* ================= TABLET ================= */
 
 @media (max-width: 900px) {
 
+header {
+
+padding: 12px 5%;
+}
+
+nav a {
+
+margin-left: 12px;
+}
+
 .hero h1 {
-font-size: 52px;
+
+font-size: 55px;
 }
 
 .category-grid {
+
 grid-template-columns: 1fr 1fr;
 }
 
 .value-grid {
+
 grid-template-columns: 1fr 1fr;
 }
 
 .about-grid {
+
 grid-template-columns: 1fr;
 }
+
 }
+
 
 /* ================= MOBILE ================= */
 
 @media (max-width: 650px) {
 
 header {
+
 flex-direction: column;
+
 gap: 12px;
+
+padding: 12px 5%;
 }
 
 nav {
+
+justify-content: center;
+
 text-align: center;
 }
 
 nav a {
+
 display: inline-block;
-margin: 5px 7px;
+
+margin: 4px 6px;
+
+font-size: 13px;
 }
 
 .hero {
-min-height: 600px;
-background-position: center;
+
+min-height: 650px;
+
+background-position: center center;
 }
 
 .hero-content {
+
 padding: 70px 7%;
 }
 
+.hero-small {
+
+font-size: 12px;
+
+letter-spacing: 2px;
+}
+
 .hero h1 {
-font-size: 40px;
+
+font-size: 42px;
 }
 
 .hero p {
+
 font-size: 16px;
 }
 
 .section {
+
 padding: 60px 6%;
 }
 
 .section-title h2 {
+
 font-size: 30px;
 }
 
-.category-grid,
+.category-grid {
+
+grid-template-columns: 1fr;
+}
+
 .value-grid {
+
 grid-template-columns: 1fr;
 }
 
 .about-image img {
+
 height: 300px;
 }
 
 .featured-box img {
+
 height: 350px;
 }
 
 .cta h2 {
-font-size: 30px;
+
+font-size: 31px;
 }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+.hero h1 {
+
+font-size: 36px;
+}
+
+.btn {
+
+display: block;
+
+text-align: center;
+
+margin-right: 0;
+}
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- ==================================================
+HEADER
+================================================== -->
 
 <header>
 
@@ -510,6 +779,7 @@ WEAR IT LIKE A CHAMP
 </div>
 
 </div>
+
 
 <nav>
 
@@ -542,7 +812,9 @@ Contact
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- ==================================================
+HERO
+================================================== -->
 
 <section class="hero">
 
@@ -565,12 +837,20 @@ Built for athletes, gyms, academies
 and champions who never stop improving.
 </p>
 
-<a href="products.html" class="btn">
+
+<a
+href="products.html"
+class="btn"
+>
 EXPLORE PRODUCTS
 </a>
 
-<a href="contact.html" class="btn btn-outline">
-CONTACT ACE
+
+<a
+href="contact.html"
+class="btn btn-outline"
+>
+CONTACT US
 </a>
 
 </div>
@@ -578,7 +858,9 @@ CONTACT ACE
 </section>
 
 
-<!-- ================= CATEGORIES ================= -->
+<!-- ==================================================
+PRODUCT CATEGORIES
+================================================== -->
 
 <section class="section categories">
 
@@ -589,15 +871,22 @@ Explore <span>Our Range</span>
 </h2>
 
 <p>
-Equipment made for training, performance
-and the fighting spirit.
+Equipment made for training,
+performance and the fighting spirit.
 </p>
 
 </div>
 
+
 <div class="category-grid">
 
-<a href="boxing.html" class="category-card">
+
+<!-- BOXING -->
+
+<a
+href="boxing.html"
+class="category-card"
+>
 
 <div class="category-icon">
 🥊
@@ -608,14 +897,19 @@ Boxing Equipment
 </h3>
 
 <p>
-Gloves, training equipment and boxing
-essentials for serious athletes.
+Gloves, training equipment and
+boxing essentials for serious athletes.
 </p>
 
 </a>
 
 
-<a href="combat.html" class="category-card">
+<!-- COMBAT -->
+
+<a
+href="combat.html"
+class="category-card"
+>
 
 <div class="category-icon">
 🥋
@@ -626,14 +920,19 @@ Combat Sports
 </h3>
 
 <p>
-Equipment for martial arts, combat
-training and fight preparation.
+Equipment for martial arts,
+combat training and fight preparation.
 </p>
 
 </a>
 
 
-<a href="fitness.html" class="category-card">
+<!-- FITNESS -->
+
+<a
+href="fitness.html"
+class="category-card"
+>
 
 <div class="category-icon">
 🏋️
@@ -650,16 +949,20 @@ academies and everyday training.
 
 </a>
 
+
 </div>
 
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ==================================================
+ABOUT PREVIEW
+================================================== -->
 
 <section class="section about">
 
 <div class="about-grid">
+
 
 <div class="about-text">
 
@@ -681,7 +984,11 @@ dependable construction and equipment
 made for real training.
 </p>
 
-<a href="about.html" class="btn">
+
+<a
+href="about.html"
+class="btn"
+>
 OUR STORY
 </a>
 
@@ -697,12 +1004,15 @@ alt="ACE Boxing Training"
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- ================= FEATURED ================= -->
+<!-- ==================================================
+FEATURED IMAGE
+================================================== -->
 
 <section class="section featured">
 
@@ -713,7 +1023,8 @@ Train Like a <span>Champion</span>
 </h2>
 
 <p>
-Equipment that becomes part of every training session.
+Equipment that becomes part of every
+training session.
 </p>
 
 </div>
@@ -723,7 +1034,7 @@ Equipment that becomes part of every training session.
 
 <img
 src="images/background/home-banner.jpg"
-alt="ACE Boxing Training"
+alt="ACE Boxing Gloves"
 >
 
 </div>
@@ -731,7 +1042,9 @@ alt="ACE Boxing Training"
 </section>
 
 
-<!-- ================= VALUES ================= -->
+<!-- ==================================================
+WHY ACE
+================================================== -->
 
 <section class="section values">
 
@@ -749,6 +1062,7 @@ The values behind the ACE brand.
 
 
 <div class="value-grid">
+
 
 <div class="value-box">
 
@@ -805,12 +1119,15 @@ to customer satisfaction.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- ================= CTA ================= -->
+<!-- ==================================================
+CONTACT CTA
+================================================== -->
 
 <section class="cta">
 
@@ -823,18 +1140,28 @@ Explore ACE sports equipment or contact us
 for product, dealer and bulk order enquiries.
 </p>
 
-<a href="products.html" class="btn">
+
+<a
+href="products.html"
+class="btn"
+>
 VIEW PRODUCTS
 </a>
 
-<a href="dealer.html" class="btn btn-outline">
-BECOME A DEALER
+
+<a
+href="contact.html"
+class="btn btn-outline"
+>
+CONTACT US
 </a>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ==================================================
+FOOTER
+================================================== -->
 
 <footer>
 
@@ -847,20 +1174,40 @@ alt="ACE Logo"
 
 </div>
 
+
 <div class="footer-tagline">
 WEAR IT LIKE A CHAMP
 </div>
 
+
 <div class="footer-links">
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="products.html">Products</a>
-<a href="gallery.html">Gallery</a>
-<a href="dealer.html">Dealer</a>
-<a href="contact.html">Contact</a>
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="products.html">
+Products
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="dealer.html">
+Dealer
+</a>
+
+<a href="contact.html">
+Contact
+</a>
 
 </div>
+
 
 <p>
 © 2026 ACE – Wear It Like a Champ.
@@ -868,6 +1215,7 @@ All Rights Reserved.
 </p>
 
 </footer>
+
 
 </body>
 </html>
