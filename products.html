@@ -544,7 +544,7 @@ Products
 Gallery
 </a>
 
-<a href="dealer.html">
+<a href="dealers.html">
 Dealer
 </a>
 
@@ -839,7 +839,7 @@ WEAR IT LIKE A CHAMP
 <a href="about.html">About</a>
 <a href="products.html">Products</a>
 <a href="gallery.html">Gallery</a>
-<a href="dealer.html">Dealer</a>
+<a href="dealers.html">Dealer</a>
 <a href="contact.html">Contact</a>
 
 </div>
@@ -884,6 +884,7 @@ card.innerHTML = `
 src="images/products/${folder}/${prefix}${i}.png"
 alt="ACE ${title} ${i}"
 loading="lazy"
+onerror="this.onerror=null; this.src='images/products/${folder}/${prefix}${i}.jpeg';"
 >
 
 </div>
@@ -960,7 +961,7 @@ createProducts(
 
 createProducts(
 "combat-sports-grid",
-"combat-sports",
+"combact-sports",
 "cs",
 9,
 "Combat Sports",
@@ -996,7 +997,7 @@ createProducts(
 
 createProducts(
 "training-accessories-grid",
-"training-accessories",
+"training-acessories",
 "ta",
 11,
 "Training Accessories",
